@@ -93,12 +93,12 @@ function getArg() {
       if (arg[key].includes("$seed")) {
         arg[key] = seed;
       } else if (arg[key].includes("$unprompt")) {
-        arg[key] = arg[key].replaceAll(
+        arg[key] = arg[key].replace(
           "$unprompt",
           server.isMagic ? unprompt + "," + unTags : unTags
         );
       } else if (arg[key].includes("$prompts")) {
-        arg[key] = arg[key].replaceAll(
+        arg[key] = arg[key].replace(
           "$prompts",
           server.isMagic ? prompt + "," + tags : tags
         );
