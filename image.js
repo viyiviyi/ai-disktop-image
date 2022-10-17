@@ -91,7 +91,7 @@ function getArg() {
   const unTags = "";
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
-  const arg = server.arg;
+  const arg = Object.assign({},server.arg);
   Object.keys(arg).forEach((key) => {
     if (typeof arg[key] === "string") {
       if (arg[key].includes("$seed")) {
@@ -138,12 +138,12 @@ async function saveImage(base64, path = "images") {
     return null;
   }
 }
-module.exports.setTags = function setTags(prompts, unprompt) {
+function setTags(prompts, unprompt) {
   defaultPrompts.prompt = prompts || "";
   defaultPrompts.unprompt = unprompt || "";
-};
+}
 
-module.exports.getImage = async function getImage(path = undefined) {
+async function getImage(path = undefined) {
   var arg = getArg();
   console.log("arg:", arg);
   return await axios
@@ -159,21 +159,30 @@ module.exports.getImage = async function getImage(path = undefined) {
       let base64 = d.split(":")[1];
       return saveImage(base64, path);
     });
-};
+}
 /**
  * 图片超分辨率
  * @param {string} path  图片文件路径
  * @param {string} outPath 输出图片文件路径
  * @returns {boolean} 是否成功
  */
-module.exports.srImage = async function srImage(path, outPath) {
+async function srImage(path, outPath) {
   let p = exec(
     config["Super-Resolution"]
       .replace("$input", path)
       .replace("$output", outPath)
   );
   return !p.code;
-};
-module.exports.setBg = async function setBg(path) {
+}
+async function setBg(path) {
   exec("python ./setBg.py " + path);
+}
+
+module.exports = {
+  setBg,
+  srImage,
+  srImage,
+  getImage,
+  setTags,
+  getArg,
 };
