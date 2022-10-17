@@ -97,11 +97,21 @@ function getArg() {
           "$unprompt",
           server.isMagic ? unprompt + "," + unTags : unTags
         );
+        let set = new Set();
+        arg[key].split(",").forEach((v) => {
+          set.add(v);
+        });
+        arg[key] = Array.from(set).join(',');
       } else if (arg[key].includes("$prompts")) {
         arg[key] = arg[key].replace(
           "$prompts",
           server.isMagic ? prompt + "," + tags : tags
         );
+        let set = new Set();
+        arg[key].split(",").forEach((v) => {
+          set.add(v);
+        });
+        arg[key] = Array.from(set).join(',');
       }
     }
   });
