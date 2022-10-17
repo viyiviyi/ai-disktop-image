@@ -45,6 +45,10 @@ if (!server) {
     ? config["server-type-all"][0]
     : defaultConfig["server-type-all"][0];
 }
+const defaultPrompts = {
+  prompt: "",
+  unprompt: "",
+};
 
 function getPrompt(prompts) {
   if (Array.isArray(prompts) && prompts.length > 1) {
@@ -97,27 +101,29 @@ function getArg() {
           "$unprompt",
           server.isMagic ? unprompt + "," + unTags : unTags
         );
+        arg[key] += "," + defaultPrompts.unprompt;
         let set = new Set();
         arg[key].split(",").forEach((v) => {
           set.add(v);
         });
-        arg[key] = Array.from(set).join(',');
+        arg[key] = Array.from(set).join(",");
       } else if (arg[key].includes("$prompts")) {
         arg[key] = arg[key].replace(
           "$prompts",
           server.isMagic ? prompt + "," + tags : tags
         );
+        arg[key] += "," + defaultPrompts.prompt;
         let set = new Set();
         arg[key].split(",").forEach((v) => {
           set.add(v);
         });
-        arg[key] = Array.from(set).join(',');
+        arg[key] = Array.from(set).join(",");
       }
     }
   });
   return arg;
 }
-async function saveImage(base64,path='images') {
+async function saveImage(base64, path = "images") {
   var dir = path;
   if (!fs.existsSync(join(__dirname, dir))) {
     fs.mkdirSync(join(__dirname, dir));
@@ -132,8 +138,12 @@ async function saveImage(base64,path='images') {
     return null;
   }
 }
+module.exports.setTags = function setTags(prompts, unprompt) {
+  defaultPrompts.prompt = prompts;
+  defaultPrompts.unprompt = unprompt;
+};
 
-module.exports.getImage = async function getImage(path=undefined) {
+module.exports.getImage = async function getImage(path = undefined) {
   var arg = getArg();
   console.log("arg:", arg);
   return await axios
@@ -147,23 +157,23 @@ module.exports.getImage = async function getImage(path=undefined) {
       let d = data.split("\n").find((f) => f.startsWith("data:"));
       if (!d) return;
       let base64 = d.split(":")[1];
-      return saveImage(base64,path);
+      return saveImage(base64, path);
     });
-}
+};
 /**
  * 图片超分辨率
  * @param {string} path  图片文件路径
  * @param {string} outPath 输出图片文件路径
  * @returns {boolean} 是否成功
  */
- module.exports.srImage = async function srImage(path, outPath) {
+module.exports.srImage = async function srImage(path, outPath) {
   let p = exec(
     config["Super-Resolution"]
       .replace("$input", path)
       .replace("$output", outPath)
   );
   return !p.code;
-}
+};
 module.exports.setBg = async function setBg(path) {
   exec("python ./setBg.py " + path);
-}
+};
