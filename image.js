@@ -3,8 +3,8 @@ const fs = require("fs");
 const join = require("path").join;
 const exec = require("shelljs").exec;
 const 元素法典 = require("./元素法典");
-const prompts = require("./prompts").prompts;
 const config = require("./config.json");
+const { promptsRdom } = require('./prompts')
 
 const defaultConfig = {
   "server-type-all": [
@@ -50,36 +50,6 @@ const defaultPrompts = {
   unprompt: "",
 };
 
-function getPrompt(prompts) {
-  if (Array.isArray(prompts) && prompts.length > 1) {
-    let num = 0;
-    if (Array.isArray(prompts[0]) && prompts[0].length) {
-      num = Number(prompts[0][0]);
-    } else {
-      num = Number(prompts[0]);
-    }
-    if (num >= prompts.length - 1)
-      return prompts
-        .slice(1)
-        .map(getPrompt)
-        .filter((v) => v)
-        .join(",");
-    else {
-      let arr = [];
-      for (let i = 1; i <= num; i++) {
-        arr.push(
-          getPrompt(
-            prompts[Number(parseInt(Math.random() * (prompts.length - 1) + 1))]
-          )
-        );
-      }
-      return arr.filter((v) => v).join();
-    }
-  } else if (!Array.isArray(prompts)) {
-    return prompts;
-  }
-  return undefined;
-}
 function getMagic() {
   let p = ["", ""];
   p = 元素法典[Number(parseInt(Math.random() * 元素法典.length - 1))];
@@ -87,7 +57,7 @@ function getMagic() {
 }
 function getArg() {
   const [prompt, unprompt] = getMagic();
-  const tags = getPrompt(prompts);
+  const tags = promptsRdom();
   const unTags = "";
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
