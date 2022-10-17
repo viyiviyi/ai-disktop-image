@@ -139,8 +139,8 @@ async function saveImage(base64, path = "images") {
   }
 }
 module.exports.setTags = function setTags(prompts, unprompt) {
-  defaultPrompts.prompt = prompts;
-  defaultPrompts.unprompt = unprompt;
+  defaultPrompts.prompt = prompts || "";
+  defaultPrompts.unprompt = unprompt || "";
 };
 
 module.exports.getImage = async function getImage(path = undefined) {
