@@ -1,0 +1,168 @@
+const axios = require("axios");
+const fs = require("fs");
+const join = require("path").join;
+const exec = require("shelljs").exec;
+const 元素法典 = require("./元素法典");
+const prompts = require("./prompts").prompts;
+const config = require("./config.json");
+
+const defaultConfig = {
+  "server-type-all": [
+    {
+      url: "http://localhost:7860/generate-stream",
+      name: "naifu",
+      isMagic: true,
+      arg: {
+        prompt: "masterpiece, best quality,$prompts",
+        width: 1024,
+        height: 576,
+        scale: 12,
+        sampler: "k_euler_ancestral",
+        steps: 28,
+        seed: "$seed",
+        n_samples: 1,
+        ucPreset: 0,
+        uc: "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,$unprompt",
+      },
+    },
+  ],
+  "server-type": "naifu",
+  "Super-Resolution": "ncnn -i $input -o $output",
+};
+
+if (!config) config = defaultConfig;
+if (!config["server-type"])
+  config["server-type"] = defaultConfig["server-type"];
+if (!config["Super-Resolution"])
+  config["Super-Resolution"] = defaultConfig["Super-Resolution"];
+if (!config["server-type-all"])
+  config["server-type-all"] = defaultConfig["server-type-all"];
+const server = config["server-type-all"].find(
+  (f) => f.name == config["server-type"]
+);
+if (!server) {
+  server = config["server-type-all"].length
+    ? config["server-type-all"][0]
+    : defaultConfig["server-type-all"][0];
+}
+
+function getPrompt(prompts) {
+  if (Array.isArray(prompts) && prompts.length > 1) {
+    let num = 0;
+    if (Array.isArray(prompts[0]) && prompts[0].length) {
+      num = Number(prompts[0][0]);
+    } else {
+      num = Number(prompts[0]);
+    }
+    if (num >= prompts.length - 1)
+      return prompts
+        .slice(1)
+        .map(getPrompt)
+        .filter((v) => v)
+        .join(",");
+    else {
+      let arr = [];
+      for (let i = 1; i <= num; i++) {
+        arr.push(
+          getPrompt(
+            prompts[Number(parseInt(Math.random() * (prompts.length - 1) + 1))]
+          )
+        );
+      }
+      return arr.filter((v) => v).join();
+    }
+  } else if (!Array.isArray(prompts)) {
+    return prompts;
+  }
+  return undefined;
+}
+function getMagic() {
+  let p = ["", ""];
+  p = 元素法典[Number(parseInt(Math.random() * 元素法典.length - 1))];
+  return p || [];
+}
+function getArg() {
+  const [prompt, unprompt] = getMagic();
+  const tags = getPrompt(prompts);
+  const unTags = "";
+  const seed = Number(parseInt(Math.random() * 4294967296 - 1));
+
+  const arg = server.arg;
+  Object.keys(arg).forEach((key) => {
+    if (typeof arg[key] === "string") {
+      if (arg[key].includes("$seed")) {
+        arg[key] = seed;
+      } else if (arg[key].includes("$unprompt")) {
+        arg[key] = arg[key].replaceAll(
+          "$unprompt",
+          server.isMagic ? unprompt + "," + unTags : unTags
+        );
+      } else if (arg[key].includes("$prompts")) {
+        arg[key] = arg[key].replaceAll(
+          "$prompts",
+          server.isMagic ? prompt + "," + tags : tags
+        );
+      }
+    }
+  });
+  return arg;
+}
+async function saveImage(base64) {
+  var dir = "images";
+  if (!fs.existsSync(join(__dirname, dir))) {
+    fs.mkdirSync(join(__dirname, dir));
+  }
+  var fileName = Date.now() + ".png";
+  try {
+    let path = join(__dirname, dir, fileName);
+    fs.writeFileSync(path, base64, "base64");
+    return path;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+async function getImage() {
+  var arg = getArg();
+  console.log("arg:", arg);
+  return await axios
+    .post(server.url, arg)
+    .then((res) => {
+      return res.data;
+    })
+    .then((data) => {
+      if (typeof data === "object" && data.error) console.error(data.error);
+      if (typeof data !== "string") return;
+      let d = data.split("\n").find((f) => f.startsWith("data:"));
+      if (!d) return;
+      let base64 = d.split(":")[1];
+      return saveImage(base64);
+    });
+}
+/**
+ * 图片超分辨率
+ * @param {string} path  图片文件路径
+ * @param {string} outPath 输出图片文件路径
+ * @returns {boolean} 是否成功
+ */
+async function srImage(path, outPath) {
+  let p = exec(
+    config["Super-Resolution"]
+      .replace("$input", path)
+      .replace("$output", outPath)
+  );
+  return !p.code;
+}
+async function setBg(path) {
+  exec("python ./setBg.py " + path);
+}
+
+async function main() {
+  var path = await getImage();
+  console.log("image path:", path);
+  if (!path) return;
+  if (!(await srImage(path, path))) return;
+  await setBg(path);
+}
+main();
