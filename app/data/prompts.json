@@ -1,0 +1,5354 @@
+[
+  {
+    "title": "常用",
+    "enable": false,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "优质Tag",
+        "list": [
+          {
+            "value": "masterpiece, best quality",
+            "title": ", 高质量",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper",
+            "title": "更高质量",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "反向Tag",
+        "list": [
+          {
+            "value": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet",
+            "title": "通用反Tag",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "环境",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "朝朝暮暮",
+        "list": [
+          {
+            "value": "day",
+            "title": "白天",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dusk",
+            "title": "黄昏",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "night",
+            "title": "夜晚",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in spring",
+            "title": "春",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in summer",
+            "title": "夏",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in autumn",
+            "title": "秋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in winter",
+            "title": "冬",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "日月星辰",
+        "list": [
+          {
+            "value": "sun",
+            "title": "太阳",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sunset",
+            "title": "落日",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "moon",
+            "title": "月亮",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "full_moon",
+            "title": "满月",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "stars",
+            "title": "星星",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cloudy",
+            "title": "多云",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "rain",
+            "title": "下雨",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in the rain",
+            "title": "雨中",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "rainy days",
+            "title": "雨天",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "天涯海角",
+        "list": [
+          {
+            "value": "sky",
+            "title": "天空",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sea",
+            "title": "大海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mountain",
+            "title": "山",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "on a hill",
+            "title": "山上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "the top of the hill",
+            "title": "山顶",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in a meadow",
+            "title": "草地",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "plateau",
+            "title": "高原",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "on a desert",
+            "title": "沙漠",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in hawaii",
+            "title": "夏威夷",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cityscape",
+            "title": "城市风景",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "landscape",
+            "title": "风景",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "beautiful detailed sky",
+            "title": "好天",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "beautiful detailed water",
+            "title": "好水",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "on the beach",
+            "title": "海滩上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "on the ocean",
+            "title": "在大海上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "over the sea",
+            "title": "海边上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "beautiful purple sunset at beach",
+            "title": "",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in the ocean",
+            "title": "海边日落",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "against backlight at dusk",
+            "title": "傍晚背对阳光",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "golden hour lighting",
+            "title": "黄金时段照明",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "strong rim light",
+            "title": "强边缘光",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "intense shadows",
+            "title": "强阴影",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fireworks",
+            "title": "焰火",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "flower field",
+            "title": "花田",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "underwater",
+            "title": "水下",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "explosion",
+            "title": "爆炸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "in the cyberpunk city",
+            "title": "在赛博朋克城市",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "steam",
+            "title": "蒸汽",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "风格",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "风格-default",
+        "list": [
+          {
+            "value": "artbook",
+            "title": "原画",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "game_cg",
+            "title": "游戏CG",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "comic",
+            "title": "漫画",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "4koma",
+            "title": "四格",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "animated_gif",
+            "title": "gif格式图片",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dakimakura",
+            "title": "抱枕",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cosplay",
+            "title": "角色扮演",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crossover",
+            "title": "穿越",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dark",
+            "title": "暗的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "light",
+            "title": "亮的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "night",
+            "title": "晚上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "guro",
+            "title": "猎奇",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "realistic",
+            "title": "写实",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "photo",
+            "title": "照片",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "real",
+            "title": "真实",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "landscape/scenery",
+            "title": "风景",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cityscape",
+            "title": "城市风景",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "science_fiction",
+            "title": "科技幻想",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "original",
+            "title": "原创",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "parody",
+            "title": "拙劣的模仿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "personification",
+            "title": "拟人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "checkered",
+            "title": "格子的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lowres",
+            "title": "低分辨率",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "highres",
+            "title": "高分辨率",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "absurdres",
+            "title": "超高分辨率",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "incredibly_absurdres",
+            "title": "极高分辨率",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "huge_filesize",
+            "title": "超级高分辨率/大文件",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wallpaper",
+            "title": "壁纸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pixel_art",
+            "title": "点阵图",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "monochrome",
+            "title": "单色图片",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "colorful",
+            "title": "色彩斑斓的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "optical_illusion",
+            "title": "视觉错误",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fine_art_parody",
+            "title": "名画模仿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sketch",
+            "title": "素描",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "traditional_media",
+            "title": "传统媒体（基本上是手绘稿）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "watercolor_(medium)",
+            "title": "透明水彩绘",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "silhouette",
+            "title": "剪影",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "covr",
+            "title": "封面",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "album",
+            "title": "专辑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sample",
+            "title": "图上有sample字样",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "back",
+            "title": "背影像",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bust",
+            "title": "半身像",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "profile",
+            "title": "侧面绘",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "expressions",
+            "title": "表情绘（各种表情）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "everyone",
+            "title": "一部作品中的主要人物集齐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "column_lineup",
+            "title": "一列列小图组成大图",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "transparent_background",
+            "title": "透明的背景(.png)",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "simple_background",
+            "title": "简单的背景(无背景)",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gradient_background",
+            "title": "渐变的背景",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "zoom_layer",
+            "title": "背景是前景的放大版",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "English",
+            "title": "英文",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "Chinese",
+            "title": "中文",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "French",
+            "title": "法文",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "Japanese",
+            "title": "日本人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "translation_request",
+            "title": "翻译",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bad_id",
+            "title": "ID转向错误(原地址或已被删除)",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tagme",
+            "title": "图片有一些上传者未知的项目",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "artist_request",
+            "title": "作者未知,需要补完",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "what",
+            "title": "不知所谓",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "人物",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "人物-default",
+        "list": [
+          {
+            "value": "girl",
+            "title": "女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "2girls",
+            "title": "2女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "3girls",
+            "title": "3女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "boy",
+            "title": "男孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "2boys",
+            "title": "2男孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "3boys",
+            "title": "3男孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "solo",
+            "title": "单人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "multiple girls",
+            "title": "多个",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "little girl",
+            "title": "小女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "little boy",
+            "title": "小男孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shota",
+            "title": "正太",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "loli",
+            "title": "萝莉",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "kawaii",
+            "title": "可爱",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mesugaki",
+            "title": "雌小鬼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "adorable girl",
+            "title": "可爱的女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bishoujo",
+            "title": "美少女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gyaru",
+            "title": "辣妹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sisters",
+            "title": "姐妹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ojousama",
+            "title": "大小姐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mature female",
+            "title": "成熟女性",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mature",
+            "title": "成熟",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "female pervert",
+            "title": "痴女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "milf",
+            "title": "熟女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "harem",
+            "title": "后宫",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "角色",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "角色-default",
+        "list": [
+          {
+            "value": "angel",
+            "title": "天使",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cheerleader",
+            "title": "啦啦队",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "chibi",
+            "title": "Q版人物",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crossdressing",
+            "title": "伪娘",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "devil",
+            "title": "魔鬼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "doll",
+            "title": "人偶",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "elf",
+            "title": "妖精",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fairy",
+            "title": "小精灵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "female",
+            "title": "女人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "furry",
+            "title": "兽人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "orc",
+            "title": "半兽人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "giantess",
+            "title": "女巨人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "harem",
+            "title": "后宫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "idol",
+            "title": "偶像",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "kemonomimi_mode",
+            "title": "兽耳萝莉模式",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "loli",
+            "title": "萝莉",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "magical_girl",
+            "title": "魔法少女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "maid",
+            "title": "女仆",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "male",
+            "title": "男人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mermaid",
+            "title": "美人鱼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "miko",
+            "title": "巫女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "milf",
+            "title": "熟女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "minigirl",
+            "title": "迷你女孩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "monster",
+            "title": "怪物",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "multiple_girls",
+            "title": "魔幻少女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ninja",
+            "title": "忍者",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "no_humans",
+            "title": "非人",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "nun",
+            "title": "修女",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "nurse",
+            "title": "护士",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shota",
+            "title": "正太",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "stewardess",
+            "title": "空姐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "student",
+            "title": "学生",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "trap",
+            "title": "伪娘",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "vampire",
+            "title": "吸血鬼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "waitress",
+            "title": "女服务员",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "witch",
+            "title": "女巫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "yaoi",
+            "title": "搞基",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "yukkuri_shiteitte_ne",
+            "title": "油库里",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "yuri",
+            "title": "百合",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "头发&发饰",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "very short hair",
+            "title": "很短",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "short hair",
+            "title": "短发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "medium hair",
+            "title": "中发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "long hair",
+            "title": "长发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "very long hair",
+            "title": "很长",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "absurdly long hair",
+            "title": "特别长",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair over shoulder",
+            "title": "头发过肩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "alternate hair length",
+            "title": "有长有短",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "blonde hair",
+            "title": "金色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "brown hair",
+            "title": "棕色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black hair",
+            "title": "黑色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "blue hair",
+            "title": "蓝色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "purple hair",
+            "title": "紫色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pink hair",
+            "title": "粉红",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white hair",
+            "title": "白色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "red hair",
+            "title": "红色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "grey hair",
+            "title": "灰色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "green hair",
+            "title": "绿色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "silver hair",
+            "title": "银色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "orange hair",
+            "title": "橙色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "light brown hair",
+            "title": "浅棕",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "light purple hair",
+            "title": "浅紫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "light blue hair",
+            "title": "浅蓝",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gradient hair",
+            "title": "渐变",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "multicolored hair",
+            "title": "多色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shiny hair",
+            "title": "闪亮",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "two-tone hair",
+            "title": "双色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "streaked hair",
+            "title": "挑染",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "aqua hair",
+            "title": "水色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "colored inner hair",
+            "title": "内层彩发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "alternate hair color",
+            "title": "交替发色",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair up",
+            "title": "头发起来",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair down",
+            "title": "头发下垂",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wet hair",
+            "title": "湿头发",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "ahoge",
+            "title": "呆毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "antenna hair",
+            "title": "多根呆毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bob cut",
+            "title": "妹妹切",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hime_cut",
+            "title": "公主切",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crossed bangs",
+            "title": "交叉刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair wings",
+            "title": "翼状头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "disheveled hair",
+            "title": "蓬发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wavy hair",
+            "title": "波浪头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "curly_hair",
+            "title": "卷发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair in takes",
+            "title": "收拢",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "forehead",
+            "title": "露额头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "drill hair",
+            "title": "公主卷",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bun",
+            "title": "包子头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "double_bun",
+            "title": "俩包子头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "straight hair",
+            "title": "直发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "spiked hair",
+            "title": "尖刺的头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "short hair with long locks",
+            "title": "短发长鬓角",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "low-tied long hair",
+            "title": "低扎长发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "asymmetrical hair",
+            "title": "不对称的头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "alternate hairstyle",
+            "title": "交替发型",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "messy_hair",
+            "title": "凌乱发型",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "braid",
+            "title": "辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "twin braids",
+            "title": "双辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "single braid",
+            "title": "单辫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "side braid",
+            "title": "侧辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "long braid",
+            "title": "长辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "french braid",
+            "title": "法式辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crown braid",
+            "title": "皇冠编织",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "braided bun",
+            "title": "编织发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ponytail",
+            "title": "马尾辫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "braided ponytail",
+            "title": " 编马尾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "high ponytail",
+            "title": "高马尾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "twintails",
+            "title": "双马尾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "short_ponytail",
+            "title": "短马尾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "twin_braids",
+            "title": "双辫子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "Side ponytail",
+            "title": "侧马",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "bangs",
+            "title": "刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "blunt bangs",
+            "title": "齐刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "parted bangs",
+            "title": "分刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "swept bangs",
+            "title": "侧扫刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crossed bangs",
+            "title": "交叉刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "asymmetrical bangs",
+            "title": "不对称刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "braided bangs",
+            "title": "辫子刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "long bangs",
+            "title": "长刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bangs pinned back",
+            "title": "往后夹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "diagonal bangs",
+            "title": "斜刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dyed bangs",
+            "title": "染刘海",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair between eyes",
+            "title": "眼睛之间的头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair over one eye",
+            "title": "一只眼睛上的头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair over eyes",
+            "title": "头发遮住眼睛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair behind ear",
+            "title": "耳朵后面的头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair between breasts",
+            "title": "乳房之间的毛发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair over breasts",
+            "title": "乳房上的头发",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "头发&发饰-default",
+        "list": [
+          {
+            "value": "hair ornament",
+            "title": "发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bow",
+            "title": "蝴蝶结",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair ribbon",
+            "title": "发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hairband",
+            "title": "发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair flower",
+            "title": "头花",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bun",
+            "title": "发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bobbles",
+            "title": "毛球",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hairclip",
+            "title": "发夹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "single hair bun",
+            "title": "单发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "x hair ornament",
+            "title": "x发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black hairband",
+            "title": "黑色发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair scrunchie",
+            "title": "发箍",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair rings",
+            "title": "发圈",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tied hair",
+            "title": "扎头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hairpin",
+            "title": "发夹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white hairband",
+            "title": "白色发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair tie",
+            "title": "发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "frog hair ornament",
+            "title": "青蛙发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "food-themed hair ornament",
+            "title": "食物发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tentacle hair",
+            "title": "触手头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "star hair ornament",
+            "title": "星星发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bell",
+            "title": "发铃",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heart hair ornament",
+            "title": "心形发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "red hairband",
+            "title": "红色发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "butterfly hair ornament",
+            "title": "蝴蝶发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair stick",
+            "title": "发棒",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "snake hair ornament",
+            "title": "蛇发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lolita hairband",
+            "title": "洛丽塔发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crescent hair ornament",
+            "title": "新月发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cone hair bun",
+            "title": "锥形发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "feather hair ornament",
+            "title": "羽毛头饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "blue hairband",
+            "title": "蓝色发带",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "五官",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "五官-default",
+        "list": [
+          {
+            "value": "light smile",
+            "title": "微笑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "seductive smile",
+            "title": "诱惑笑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "grin",
+            "title": "露齿而笑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "laughing",
+            "title": "笑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "teeth",
+            "title": " 牙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "excited",
+            "title": "兴奋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "embarrassed",
+            "title": " 害羞",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "blush",
+            "title": "脸红",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shy",
+            "title": "害羞",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "nose blush",
+            "title": " 害羞",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "expressionless",
+            "title": "无表情",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "expressionless eyes",
+            "title": "失神",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sleepy",
+            "title": "困",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "drunk",
+            "title": "喝醉的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tears",
+            "title": "哭",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crying with eyes open",
+            "title": "哭",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sad",
+            "title": "悲伤的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pout",
+            "title": "别扭 努嘴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sigh",
+            "title": "叹气",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wide eyed",
+            "title": "睁大眼睛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "angry",
+            "title": "生气",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "annoyed",
+            "title": "苦恼的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "frown",
+            "title": "皱眉",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smirk",
+            "title": "认真",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "serious",
+            "title": "严肃",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "jitome",
+            "title": "鄙夷",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "scowl",
+            "title": "锐利",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crazy",
+            "title": "疯狂的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dark_persona",
+            "title": "黑化的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smirk",
+            "title": "微笑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smug",
+            "title": "得意",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "naughty_face",
+            "title": "调皮脸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "one eye closed",
+            "title": "一只眼睛闭上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "half-closed eyes",
+            "title": "半闭眼睛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "nosebleed",
+            "title": "鼻血",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "eyelid pull",
+            "title": " 做鬼脸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tongue",
+            "title": "舌头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tongue out",
+            "title": "吐舌",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "closed mouth",
+            "title": "闭嘴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "open mouth",
+            "title": "张嘴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lipstick",
+            "title": "口红",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fangs",
+            "title": "尖牙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "clenched teeth",
+            "title": "咬紧牙关",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": ":3",
+            "title": "ω猫嘴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": ":p",
+            "title": "向下吐舌头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": ":q",
+            "title": "向上吐舌头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": ":t",
+            "title": "不耐烦",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": ":d",
+            "title": "杯型笑脸",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "五官-default",
+        "list": [
+          {
+            "value": "naughty_face",
+            "title": "下流的表情",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "endured_face",
+            "title": "忍耐的表情",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ahegao",
+            "title": "阿黑颜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "blood on face",
+            "title": "血在脸上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "saliva",
+            "title": "唾液",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "表情",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "表情-default",
+        "list": [
+          {
+            "value": "food on face",
+            "title": " 食物在脸上（食物可替换）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "light blush",
+            "title": "淡淡腮红",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "facepaint",
+            "title": "面纹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "makeup",
+            "title": " 浓妆",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cute face",
+            "title": "可爱表情",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white colored eyelashes",
+            "title": "白色睫毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "longeyelashes",
+            "title": "长睫毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white eyebrows",
+            "title": "白色眉毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tsurime",
+            "title": "吊眼角",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gradient_eyes",
+            "title": "渐变眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "beautiful detailed eyes",
+            "title": "美丽的细节眼睛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tareme",
+            "title": "垂眼角",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "slit pupils",
+            "title": " 猫眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heterochromia",
+            "title": " 异色瞳",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heterochromia blue red",
+            "title": "红蓝眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "aqua eyes",
+            "title": "水汪汪大眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "looking at viewer",
+            "title": "看你",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "eyeball",
+            "title": "盯着看",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "stare",
+            "title": "凝视",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "visible through hair",
+            "title": "透过刘海看",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "looking to the side",
+            "title": " 看旁边",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "constricted pupils",
+            "title": "收缩的瞳孔",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "symbol-shaped pupils",
+            "title": " 符号形状的瞳孔",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heart in eye",
+            "title": "❤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heart-shaped pupils",
+            "title": "爱心瞳孔",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wink",
+            "title": " 眨眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mole under eye",
+            "title": "眼下痣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "eyes closed",
+            "title": " 闭眼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "no_nose",
+            "title": "没鼻子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fake animal ears",
+            "title": "动物耳朵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "animal ear fluff",
+            "title": " 动物耳绒毛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "animal_ears",
+            "title": "动物耳朵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fox_ears",
+            "title": "狐狸耳朵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bunny_ears",
+            "title": "兔子耳朵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cat_ears",
+            "title": "猫耳",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dog_ears",
+            "title": "狗耳",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mouse_ears",
+            "title": "叔耳",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair ear",
+            "title": " 头发上耳朵",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pointy ears",
+            "title": " 尖耳",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "动作",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "动作-default",
+        "list": [
+          {
+            "value": "head tilt",
+            "title": " 歪头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "turning around",
+            "title": "回头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "looking back",
+            "title": "回头",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "looking down",
+            "title": "向下看",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "looking up",
+            "title": "向上看",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smelling",
+            "title": "闻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hand_to_mouth",
+            "title": "手放在嘴边",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arm at side",
+            "title": " 手放头旁边",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arms behind head",
+            "title": "手放脑后",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arms behind back",
+            "title": " 手放后面",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hand on own chest",
+            "title": "手放在自己的胸前",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arms_crossed",
+            "title": "手交叉于胸前",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hand on hip",
+            "title": " 手放臀",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hand on another's hip",
+            "title": " 手放臀",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hand_on_hip",
+            "title": "单手插腰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hands_on_hips",
+            "title": "双手叉腰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arms up",
+            "title": "举手",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hands up",
+            "title": " 举手",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "stretch",
+            "title": "伸懒腰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "armpits",
+            "title": "举手露腋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leg hold",
+            "title": "手把腿抓着",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "grabbing",
+            "title": "抓住",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "holding",
+            "title": "拿着",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fingersmile",
+            "title": "用手指做出笑脸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair_pull",
+            "title": "拉头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair scrunchie",
+            "title": "撮头发",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "w",
+            "title": " 手势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "v",
+            "title": "耶",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "peace symbol",
+            "title": " 耶",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "thumbs_up",
+            "title": "翘大拇指",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "middle_finger",
+            "title": "比出中指",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cat_pose",
+            "title": "猫爪手势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "finger_gun",
+            "title": "手枪手势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shushing",
+            "title": "嘘手势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "waving",
+            "title": "招手",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "salute",
+            "title": "敬礼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "spread_arms",
+            "title": "张手",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "spread legs",
+            "title": "张开腿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crossed_legs",
+            "title": "二郎腿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fetal_position",
+            "title": "曲腿至胸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leg_lift",
+            "title": "抬一只脚",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "legs_up",
+            "title": "抬两只脚",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leaning forward",
+            "title": " 前倾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fetal position",
+            "title": "婴儿姿势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "against wall",
+            "title": "靠墙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "on_stomach",
+            "title": "趴着",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "squatting",
+            "title": "蹲下",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lying",
+            "title": " 躺着",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sitting",
+            "title": " 坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sitting on",
+            "title": " 坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "seiza",
+            "title": "正坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wariza/w-sitting",
+            "title": "割坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "yokozuwari",
+            "title": "侧身坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "indian_style",
+            "title": "盘腿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leg_hug",
+            "title": "抱腿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "walking",
+            "title": "走",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "running",
+            "title": "跑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "straddle",
+            "title": "跨坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "straddling",
+            "title": "跨坐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "kneeling",
+            "title": "下跪",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smoking",
+            "title": "抽烟",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arm_support",
+            "title": "用手支撑住",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "caramelldansen",
+            "title": "niconiconi",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "princess_carry",
+            "title": "公主抱",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fighting_stance",
+            "title": "战斗姿态",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "upside-down",
+            "title": "颠倒的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "top-down_bottom-up",
+            "title": "趴着翘臀",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bent_over",
+            "title": "翘臀姿势",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arched_back",
+            "title": "弓身体",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "back-to-back",
+            "title": "背对背",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "symmetrical_hand_pose",
+            "title": "手对手",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "eye_contact",
+            "title": "眼对眼（对视）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hug",
+            "title": "拥抱",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lap_pillow",
+            "title": "膝枕",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sleeping",
+            "title": "睡觉",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bathing",
+            "title": "洗澡",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mimikaki",
+            "title": "掏耳勺",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "holding_hands",
+            "title": "牵手",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "动作-default",
+        "list": [
+          {
+            "value": "all_fours",
+            "title": "四肢趴地",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "symmetrical_docking",
+            "title": "2女胸部贴在一起",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "undressing",
+            "title": "脱衣服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "skirt lift",
+            "title": "掀起裙子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shirt lift",
+            "title": "掀起上衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "adjusting_thighhigh",
+            "title": "调整过膝袜",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "服装",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "服装-default",
+        "list": [
+          {
+            "value": "sailor collar",
+            "title": "领子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hat",
+            "title": "帽子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shirt",
+            "title": "衬衫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "serafuku",
+            "title": "水手服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sailor suite",
+            "title": "水手服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sailor shirt",
+            "title": "水手服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shorts under skirt",
+            "title": "水手服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "collared shirt",
+            "title": " 有领衬衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "school uniform",
+            "title": "学校制服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "seifuku",
+            "title": "日本学生服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "business_suit",
+            "title": "职场制服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "jacket",
+            "title": "夹克",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "suit",
+            "title": " 西装",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "garreg mach monastery uniform",
+            "title": "火焰纹章军服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "revealing dress",
+            "title": "礼服长裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pink lucency full dress",
+            "title": "礼服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cleavage dress",
+            "title": "露出胸口部分的连衣裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sleeveless dress",
+            "title": "无袖连衣裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "whitedress",
+            "title": "白色连衣裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wedding_dress",
+            "title": "婚纱",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "Sailor dress",
+            "title": "水手连衣裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sweater dress",
+            "title": "毛衣裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ribbed sweater",
+            "title": "罗纹毛衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sweater jacket",
+            "title": "毛衣夹克",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dungarees",
+            "title": "工装服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "brown cardigan",
+            "title": " 棕色开襟衫（外套）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hoodie",
+            "title": " 连帽衫，卫衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "robe",
+            "title": "长袍",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cape",
+            "title": "斗篷",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cardigan",
+            "title": "羊毛衫",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "apron",
+            "title": "围裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gothic",
+            "title": "哥特风格",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lolita_fashion",
+            "title": "洛丽塔风格",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gothic_lolita",
+            "title": "哥特洛丽塔风格",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "western",
+            "title": "西部风格",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tartan",
+            "title": "格子花纹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "off_shoulder",
+            "title": "露单肩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bare_shoulders",
+            "title": "露双肩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "barefoot",
+            "title": "赤脚",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bare_legs",
+            "title": "裸足",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "striped",
+            "title": "横条花纹的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "polka_dot",
+            "title": "点状花纹的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "frills",
+            "title": "皱边的",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lace",
+            "title": "花边",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "buruma",
+            "title": "日本女生运动短裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sportswear",
+            "title": "运动服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gym_uniform",
+            "title": "运动服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tank_top",
+            "title": "女用背心",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cropped jacket",
+            "title": " 裁剪短夹克",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black sports bra",
+            "title": " 运动胸罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "crop top",
+            "title": "漏脐装",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pajamas",
+            "title": "睡衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "japanese_clothes",
+            "title": "和服",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "obi",
+            "title": "衣带(和服用)",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mesh",
+            "title": "网眼上衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sleeveless shirt",
+            "title": "无袖上衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "detached_sleeves",
+            "title": "袖肩分离装",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white bloomers",
+            "title": "白色灯笼裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "high - waist shorts",
+            "title": " 高腰腿裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pleated_skirt",
+            "title": "百褶裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "skirt",
+            "title": "裙子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "miniskirt",
+            "title": "迷你裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "short shorts",
+            "title": "热裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "summer_dress",
+            "title": "夏日长裙",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bloomers",
+            "title": "灯笼裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shorts",
+            "title": "短裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bike_shorts",
+            "title": "自行车短裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "dolphin shorts",
+            "title": "海豚短裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "belt",
+            "title": "腰带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bikini",
+            "title": "比基尼（前加颜色）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sling bikini",
+            "title": "吊索比基尼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bikini_top",
+            "title": "比基尼乳罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bikini top only",
+            "title": " 上身比基尼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "side - tie bikini bottom",
+            "title": "侧边系带比基尼下装",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "side-tie_bikini",
+            "title": "系带式比基尼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "friled bikini",
+            "title": "褶边比基尼",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bikini under clothes",
+            "title": "比基尼内衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "swimsuit",
+            "title": "泳装",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "school swimsuit",
+            "title": "学校泳衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "one-piece swimsuit",
+            "title": "连体泳衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "competition swimsuit",
+            "title": "竞技泳衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "Sukumizu",
+            "title": "死库水",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "服装-default",
+        "list": [
+          {
+            "value": "no bra",
+            "title": "没胸罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bra",
+            "title": " 胸罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "victorian",
+            "title": "褶边文胸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "frilled bra",
+            "title": " 褶边文胸",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sexy lingerie",
+            "title": "情趣内衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "transparent underwear",
+            "title": "透明内衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sarashi",
+            "title": "缠胸布",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bustier",
+            "title": "胸衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "chemise",
+            "title": "吊带胸衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "underwear",
+            "title": "内衣",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "panties",
+            "title": "内裤（前加颜色）",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "striped_panties",
+            "title": "条纹内裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "no_panties",
+            "title": "没内裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lowleg_panties/low_leg_panties",
+            "title": "低腰式内裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "side-tie_panties",
+            "title": "侧系带内裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "string_panties",
+            "title": "高腰内裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "thong",
+            "title": "丁字裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fundoshi",
+            "title": "日式丁字裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lingerie",
+            "title": "女用贴身内衣裤",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "鞋袜",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "鞋袜-default",
+        "list": [
+          {
+            "value": "shoes",
+            "title": " 鞋子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "boots",
+            "title": "靴子",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "loafers",
+            "title": "乐福鞋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "high heels",
+            "title": "高跟鞋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cross-laced_footwear",
+            "title": "系带靴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mary_janes",
+            "title": "玛丽珍鞋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "uwabaki",
+            "title": "女式学生鞋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "slippers",
+            "title": "拖鞋",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "knee_boots",
+            "title": "马靴",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      },
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "鞋袜-default",
+        "list": [
+          {
+            "value": "pantyhose",
+            "title": " 连裤袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "thighband pantyhose",
+            "title": " 大腿连裤袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "garter_belt",
+            "title": "连腰吊带袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "garter straps",
+            "title": "吊带袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "socks",
+            "title": "短袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "striped_socks",
+            "title": "横条袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "loose_socks",
+            "title": "泡泡袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "legwear",
+            "title": "裹腿",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black leggings",
+            "title": " 黑色紧身裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leggings",
+            "title": " 裤袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fishnets",
+            "title": "网袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fishnet_stockings",
+            "title": "渔网袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fishnet_pantyhose",
+            "title": "渔网袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "kneehighs",
+            "title": "长袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "stockings",
+            "title": "丝袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "thighhighs",
+            "title": "过膝袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "striped_thighhighs",
+            "title": "条纹过膝袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "white_thighhighs",
+            "title": "白色过膝袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "torn_thighhighs",
+            "title": "损坏了的过膝袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tabi",
+            "title": "日式厚底短袜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "lace-trimmed legwear",
+            "title": "蕾丝镶边紧身裤",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "leg_garter",
+            "title": "腿部花边环",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ankle_lace-up",
+            "title": "腿部系带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "thigh strap",
+            "title": " 大腿系带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "legwear under shorts",
+            "title": " 短裤下的紧身裤",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "装饰",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": false,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": false,
+        "title": "装饰-default",
+        "list": [
+          {
+            "value": "halo",
+            "title": "光环",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mini_top_hat",
+            "title": "迷你礼帽",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "beret",
+            "title": "贝雷帽",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hood",
+            "title": "兜帽",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "nurse cap",
+            "title": " 护士帽",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tiara",
+            "title": "皇冠",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "oni horns",
+            "title": "鬼角",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "demon horns",
+            "title": "恶魔角",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair ribbon",
+            "title": " 发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "flower ribbon",
+            "title": "花丝带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hairband",
+            "title": "发卡",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hairclip",
+            "title": "发夹",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair_ribbon",
+            "title": "发带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair_flower",
+            "title": "发花",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair_ornament",
+            "title": "头饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bowtie",
+            "title": "蝴蝶结",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair_bow",
+            "title": "蝴蝶结发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "maid_headdress",
+            "title": "女仆头饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bow",
+            "title": "服装饰品/头部饰品",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair ornament",
+            "title": "发饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "heart hair ornament",
+            "title": "心形",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bandaid hair ornament",
+            "title": "创可贴",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "hair bun",
+            "title": " 发包",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cone hair bun",
+            "title": " 锥形发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "double bun",
+            "title": "双发髻",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "semi-rimless eyewear",
+            "title": "半无框的眼镜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sunglasses",
+            "title": "太阳镜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "goggles",
+            "title": "风镜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "eyepatch",
+            "title": "眼罩(独眼)",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black blindfold",
+            "title": "黑色眼罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "headphones",
+            "title": "耳机",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "veil",
+            "title": "面纱",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "mouth mask",
+            "title": "口罩",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "glasses",
+            "title": "眼镜",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "earrings",
+            "title": "耳环",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "jewelry",
+            "title": "首饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bell",
+            "title": "铃铛",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "ribbon_choker",
+            "title": "颈带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "black choker",
+            "title": " 颈部饰品",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "necklace",
+            "title": "项链",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "headphones around neck",
+            "title": "耳机套脖子上",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "collar",
+            "title": " 项圈",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "sailor_collar",
+            "title": "水手领",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "neckerchief",
+            "title": "领巾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "necktie",
+            "title": " 领带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cross necklace",
+            "title": "十字架",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "pendant",
+            "title": " 吊坠",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "jewelry",
+            "title": " 珠宝",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "scarf",
+            "title": "围巾",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "armband",
+            "title": "臂章",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "armlet",
+            "title": "臂环",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "arm strap",
+            "title": " 臂带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "elbow gloves",
+            "title": " 肘部手套",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "half gloves",
+            "title": " 露指手套",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fingerless_gloves",
+            "title": "手镯",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "gloves",
+            "title": "手套",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "fingerless gloves",
+            "title": " 五指手套",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "chains",
+            "title": "锁链",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "shackles",
+            "title": "手链",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cuffs",
+            "title": "手铐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "handcuffs",
+            "title": "手铐",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bracelet",
+            "title": "手镯",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wristwatch",
+            "title": "手表",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wristband",
+            "title": "腕带",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "wrist_cuffs",
+            "title": "腕饰",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "holding book",
+            "title": "拿着书",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "holding sword",
+            "title": "拿着剑",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "tennis racket",
+            "title": "球拍",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "cane",
+            "title": "手杖",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "backpack",
+            "title": "双肩包",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "school bag",
+            "title": " 书包",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "satchel",
+            "title": "肩背书包",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "smartphone",
+            "title": " 手机",
+            "enable": true,
+            "UNNSFW": false
+          },
+          {
+            "value": "bandaid",
+            "title": "创可贴",
+            "enable": true,
+            "UNNSFW": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "R18",
+    "enable": true,
+    "max": 2,
+    "min": 2,
+    "UNNSFW": true,
+    "list": [
+      {
+        "enable": true,
+        "max": 2,
+        "min": 2,
+        "UNNSFW": true,
+        "title": "R18-default",
+        "list": [
+          {
+            "value": "tentacle",
+            "title": "触手",
+            "enable": false,
+            "UNNSFW": true
+          },
+          {
+            "value": "hairjob",
+            "title": "发交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "oral/fellatio",
+            "title": "口交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "deepthroat",
+            "title": "深喉",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "gokkun",
+            "title": "吃精",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "gag",
+            "title": "口塞",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "ballgag",
+            "title": "球塞",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bitgag",
+            "title": "棍塞",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "ring_gag",
+            "title": "扩口器",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cleave_gag",
+            "title": "用布勒住嘴",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "panty_gag",
+            "title": "用内裤塞口",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "tapegag",
+            "title": "胶带封口",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "facial",
+            "title": "颜射",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "leash",
+            "title": "宠物链",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "handjob",
+            "title": "用手做",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "groping",
+            "title": "摸索",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "areolae",
+            "title": "乳晕",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nipples",
+            "title": "乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "puffy_nipples",
+            "title": "大乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "small_nipples",
+            "title": "小乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nipple_pull",
+            "title": "啦乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nipple_torture",
+            "title": "虐乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nipple_tweak",
+            "title": "捏乳头",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nipple_piercing",
+            "title": "乳头穿孔",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "breast_grab",
+            "title": "摸乳",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "lactation",
+            "title": "哺乳（大范围）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "breast_sucking/nipple_suck",
+            "title": "吸乳（中）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "breast_feeding",
+            "title": "喂奶(小)",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "paizuri",
+            "title": "乳交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "multiple_paizuri",
+            "title": "多P乳交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "breast_smother",
+            "title": "把头塞入胸",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "piercing",
+            "title": "穿孔",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "navel_piercing",
+            "title": "肚脐穿孔",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "thigh_sex",
+            "title": "腿交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "footjob",
+            "title": "足交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "mound_of_venus",
+            "title": "腹部三角带",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "wide_hips",
+            "title": "宽盆骨",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "masturbation",
+            "title": "自慰",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "clothed_masturbation",
+            "title": "隔着衣服自慰",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "penis",
+            "title": "阳具/屌",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "testicles",
+            "title": "睾丸/蛋蛋",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "ejaculation",
+            "title": "射出",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cum",
+            "title": "射精",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cum_inside",
+            "title": "内射",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cum_on_breast",
+            "title": "射在胸上",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cum_on_hair",
+            "title": "射在头发上",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cum_on_food",
+            "title": "射在食物上",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "tamakeri",
+            "title": "蛋疼",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "pussy/vaginal",
+            "title": "阴户（前者图片远大于后者）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "pubic_hair",
+            "title": "阴毛",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "shaved_pussy",
+            "title": "剃过阴毛的（无毛B）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "no_pussy",
+            "title": "没逼的",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "clitoris",
+            "title": "阴蒂",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "fat_mons",
+            "title": "肥逼",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cameltoe",
+            "title": "骆驼脚趾逼（俗称馒头逼）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "pussy_juice",
+            "title": "爱液",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "female_ejaculation",
+            "title": "潮吹",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "grinding",
+            "title": "性器摩擦",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "crotch_rub",
+            "title": "胯部摩擦",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "facesitting",
+            "title": "坐在脸上",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cervix",
+            "title": "子宫口",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cunnilingus",
+            "title": "舔阴",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "insertion",
+            "title": "插入物",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anal_insertion",
+            "title": "菊花插入物",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "fruit_insertion",
+            "title": "用水果蔬菜",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "large_insertion",
+            "title": "巨大插入",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "penetration",
+            "title": "异物插入",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "fisting",
+            "title": "拳头插入",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "fingering",
+            "title": "手插入",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "multiple_insertions",
+            "title": "一穴多插",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "double_penetration",
+            "title": "双穴同插",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "triple_penetration",
+            "title": "三穴同插",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "double_vaginal",
+            "title": "双重入穴",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "peeing",
+            "title": "尿尿",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "have_to_pee",
+            "title": "憋尿",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "ass",
+            "title": "屁股",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "huge_ass",
+            "title": "大屁股",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "spread_ass",
+            "title": "用手张开屁股",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "buttjob",
+            "title": "臀交",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "spanked",
+            "title": "打屁股",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anus",
+            "title": "菊花",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anal",
+            "title": "爆菊",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "double_anal",
+            "title": "双重爆菊",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anal_fingering",
+            "title": "手爆菊",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anal_fisting",
+            "title": "拳爆菊",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anilingus",
+            "title": "肛吻",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "enema",
+            "title": "灌肠",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "stomach_bulge",
+            "title": "肚子胀",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "x-ray/cross-section/internal_cumshot",
+            "title": "透视人体内部",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "wakamezake",
+            "title": "酒倒在阴部",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "public",
+            "title": "公共场所",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "humiliation",
+            "title": "羞耻play",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bra_lift",
+            "title": "胸罩拉到胸上方",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "panties_around_one_leg",
+            "title": "内裤挂在一条腿上",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "caught",
+            "title": "被发现",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "walk-in",
+            "title": "进门被发现",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "body_writing",
+            "title": "身上有字",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "tally",
+            "title": "在身上计数",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "futanari",
+            "title": "双性",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "incest",
+            "title": "乱伦",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "twincest",
+            "title": "兄弟/姐妹/姐弟/兄妹",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "pegging",
+            "title": "女性使用假屌",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "femdom",
+            "title": "女奸男（逆推）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "ganguro",
+            "title": "日本黑妹",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bestiality",
+            "title": "人兽",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "gangbang",
+            "title": "轮奸",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "hreesome",
+            "title": "3P",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "group_sex/orgy/teamwork",
+            "title": "群P（多男x一女/性交派队/多女x1男）",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "tribadism",
+            "title": "磨豆腐",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "molestation",
+            "title": "性骚扰",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "voyeurism",
+            "title": "窥阴癖",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "exhibitionism",
+            "title": "裸露癖",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "rape",
+            "title": "强暴",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "about_to_be_raped",
+            "title": "将要被强暴",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "sex",
+            "title": "性爱",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "clothed_sex",
+            "title": "穿着衣服做爱",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "happy_sex",
+            "title": "快乐做爱",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "underwater_sex",
+            "title": "水中做爱",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "spitroast",
+            "title": "前后夹攻",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cock_in_thighhigh",
+            "title": "插在过膝袜里",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "69",
+            "title": "69式",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "doggystyle",
+            "title": "狗爬式",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "leg_lock/upright_straddle",
+            "title": "跨坐式",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "missionary",
+            "title": "传教士体位",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "girl_on_top",
+            "title": "女上体位",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cowgirl_position",
+            "title": "女上正骑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "reverse_cowgirl",
+            "title": "女上反骑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "virgin",
+            "title": "处女/破瓜",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "slave",
+            "title": "奴隶",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "shibari",
+            "title": "捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bondage",
+            "title": "捆绑/奴役",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bdsm",
+            "title": "绑缚与调教/支配与臣服/施虐与受虐",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "pillory/stocks",
+            "title": "枷锁",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "rope",
+            "title": "绳子",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bound_arms",
+            "title": "手臂捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "bound_wrists",
+            "title": "手腕捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "crotch_rope",
+            "title": "胯下捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "hogtie",
+            "title": "曲膝捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "frogtie",
+            "title": "青蛙捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "suspension",
+            "title": "悬空捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "spreader_bar",
+            "title": "分腿捆绑",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "wooden_horse",
+            "title": "木马",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "anal_beads",
+            "title": "肛珠",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "dildo",
+            "title": "假屌",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "cock_ring",
+            "title": "屌环",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "egg_vibrator",
+            "title": "跳蛋",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "artificial_vagina",
+            "title": "人工阴道",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "hitachi_magic_wand",
+            "title": "按摩棒",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "dildo",
+            "title": "人造阴茎",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "double_dildo",
+            "title": "双头龙",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "vibrator",
+            "title": "带振动的自慰器",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "vibrator_in_thighhighs",
+            "title": "震动开关在过膝袜里",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "nyotaimori",
+            "title": "女体盛",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "vore",
+            "title": "吃人",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "amputee",
+            "title": "截肢",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "transformation",
+            "title": "肉体变形",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "mind_control",
+            "title": "思想操控",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "censored",
+            "title": "审核过的/有码",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "uncensored",
+            "title": "未审核的/无码",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "asian",
+            "title": "亚洲",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "faceless_male",
+            "title": "无脸男",
+            "enable": true,
+            "UNNSFW": true
+          },
+          {
+            "value": "blood",
+            "title": "血",
+            "enable": true,
+            "UNNSFW": true
+          }
+        ]
+      }
+    ]
+  }
+]

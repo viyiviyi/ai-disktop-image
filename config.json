@@ -1,7 +1,7 @@
 {
   "server-type-all": [
     {
-      "url": "https://ai.22733.site/generate-stream",
+      "url": "http://localhost:7860/generate-stream",
       "name": "naifu",
       "isMagic": true,
       "arg": {

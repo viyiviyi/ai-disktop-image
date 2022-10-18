@@ -1,7 +1,7 @@
 /*eslint no-unused-vars: "off"*/
 
 const { getArg } = require("./app/image");
-const { promptsRandom: promptsRdom, upload } = require("./app/data/prompts");
+const { promptsRandom: promptsRdom, upload, updatePrompts } = require("./app/data/prompts");
 const { setBg } = require("./app/utils/utils");
 
 // console.log(promptsRdom())
@@ -10,6 +10,4 @@ const { setBg } = require("./app/utils/utils");
 
 
 
-
-
-upload()
+updatePrompts()
