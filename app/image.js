@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
 const { 元素法典 } = require("./data/元素法典");
-const { server } = require("./config");
+const { server, runEnv } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
 
 const defaultPrompts = {
@@ -16,8 +16,8 @@ function getMagic() {
   return p || [];
 }
 function getArg() {
-  const [prompt, unprompt] = getMagic();
-  const tags = promptsRdom();
+  const [prompt, unprompt] = runEnv.magic ? getMagic() : ["", ""];
+  const tags = runEnv.randomTag ? promptsRdom() : "";
   const unTags = "";
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
@@ -73,8 +73,8 @@ function setTags(prompts, unprompt) {
   defaultPrompts.unprompt = unprompt || "";
 }
 
-async function getImage(path = undefined) {
-  var arg = getArg();
+async function getImage(path = undefined, NSFW = true) {
+  var arg = getArg(NSFW);
   console.log("arg:", arg);
   return await axios
     .post(server.url, arg)

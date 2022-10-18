@@ -1,7 +1,7 @@
 {
   "server-type-all": [
     {
-      "url": "http://localhost:7860/generate-stream",
+      "url": "https://ai.22733.site/generate-stream",
       "name": "naifu",
       "isMagic": true,
       "arg": {
@@ -9,7 +9,7 @@
         "width": 1024,
         "height": 576,
         "scale": 12,
-        "sampler": "k_euler_ancestral",
+        "sampler": "k_euler",
         "steps": 28,
         "seed": "$seed",
         "n_samples": 1,

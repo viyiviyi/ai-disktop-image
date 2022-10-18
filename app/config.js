@@ -39,8 +39,14 @@ if (!server) {
     ? config["server-type-all"][0]
     : defaultConfig["server-type-all"][0];
 }
+const runEnv = {
+  NSFW: true,
+  randomTag: true,
+  magic: true,
+};
 
 module.exports = {
   config,
   server,
+  runEnv,
 };

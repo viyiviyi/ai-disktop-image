@@ -1,5 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { runEnv } = require("../config");
 
 const prompts = [
   {
@@ -1617,7 +1618,7 @@ const prompts = [
   },
   {
     title: "R18",
-    enable: false,
+    enable: true,
     max: 2,
     min: 2,
     list: [
@@ -1625,6 +1626,7 @@ const prompts = [
         enable: true,
         max: 20,
         min: 2,
+        NSFW: true,
         title: "",
         list: [
           { value: "tentacle", title: "tentacle触手", enable: true },
@@ -1714,8 +1716,8 @@ const prompts = [
             title: "clothed_masturbation隔着衣服自慰",
             enable: true,
           },
-          { value: "penis", title: "penis阳具/屌", enable: true },
-          { value: "testicles", title: "testicles睾丸/蛋蛋", enable: true },
+          { value: "penis", title: "penis阳具/屌", enable: false },
+          { value: "testicles", title: "testicles睾丸/蛋蛋", enable: false },
           { value: "ejaculation", title: "ejaculation射出", enable: true },
           { value: "cum", title: "cum射精", enable: true },
           { value: "cum_inside", title: "cum_inside内射", enable: true },
@@ -1975,20 +1977,20 @@ const prompts = [
             title: "vibrator_in_thighhighs震动开关在过膝袜里",
             enable: true,
           },
-          { value: "nyotaimori", title: "nyotaimori女体盛", enable: true },
-          { value: "vore", title: "vore吃人", enable: true },
-          { value: "amputee", title: "amputee截肢", enable: true },
+          { value: "nyotaimori", title: "nyotaimori女体盛", enable: false },
+          { value: "vore", title: "vore吃人", enable: false },
+          { value: "amputee", title: "amputee截肢", enable: false },
           {
             value: "transformation",
             title: "transformation肉体变形",
-            enable: true,
+            enable: false,
           },
           {
             value: "mind_control",
             title: "mind_control思想操控",
             enable: true,
           },
-          { value: "censored", title: "censored审核过的/有码", enable: true },
+          { value: "censored", title: "censored审核过的/有码", enable: false },
           {
             value: "uncensored",
             title: "uncensored未审核的/无码",
@@ -1998,9 +2000,9 @@ const prompts = [
           {
             value: "faceless_male",
             title: "faceless_male无脸男",
-            enable: true,
+            enable: false,
           },
-          { value: "blood", title: "blood血", enable: true },
+          { value: "blood", title: "blood血", enable: false },
         ],
       },
     ],
@@ -2008,14 +2010,18 @@ const prompts = [
 ];
 
 module.exports.prompts = prompts;
-module.exports.promptsRandom = function promptsRandom(tags = prompts) {
+module.exports.promptsRandom = function promptsRandom(
+  tags = prompts
+) {
   return tags
-    .filter((f) => f.enable)
+    .filter((f) => (f.enable && runEnv.NSFW ? true : f.NSFW))
     .map((v) => {
       if (v.list) {
         let num = v.min >= v.max ? v.min : randomNum(v.max, v.min);
         let arr = [];
-        let cache = [...v.list.filter((v) => v.enable)];
+        let cache = [
+          ...v.list.filter((v) => (v.enable && runEnv.NSFW ? true : v.NSFW)),
+        ];
         for (let i = 0; i < num; i++) {
           arr.push(cache[randomNum(cache.length - 1, 0)]);
         }
