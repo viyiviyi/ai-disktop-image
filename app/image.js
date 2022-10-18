@@ -1,10 +1,9 @@
 const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
-const exec = require("shelljs").exec;
-const 元素法典 = require("./元素法典");
+const 元素法典 = require("./data/元素法典");
 const config = require("./config.json");
-const { promptsRandom: promptsRdom } = require('./prompts')
+const { promptsRandom: promptsRdom } = require('./data/prompts')
 
 const defaultConfig = {
   "server-type-all": [
@@ -52,7 +51,7 @@ const defaultPrompts = {
 
 function getMagic() {
   let p = ["", ""];
-  p = 元素法典[Number(parseInt(Math.random() * 元素法典.length - 1))];
+  p = 元素法典[Math.floor(Math.random() * 元素法典.length)];
   return p || [];
 }
 function getArg() {
@@ -94,15 +93,15 @@ function getArg() {
   return arg;
 }
 async function saveImage(base64, path = "images") {
-  var dir = path;
-  if (!fs.existsSync(join(__dirname, dir))) {
-    fs.mkdirSync(join(__dirname, dir));
-  }
-  var fileName = Date.now() + ".png";
   try {
-    let path = join(__dirname, dir, fileName);
-    fs.writeFileSync(path, base64, "base64");
-    return path;
+    var dir = join(process.cwd(), path);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+    var fileName = Date.now() + ".png";
+    let filePath = join(dir, fileName);
+    fs.writeFileSync(filePath, base64, "base64");
+    return filePath;
   } catch (error) {
     console.error(error);
     return null;
@@ -130,28 +129,8 @@ async function getImage(path = undefined) {
       return saveImage(base64, path);
     });
 }
-/**
- * 图片超分辨率
- * @param {string} path  图片文件路径
- * @param {string} outPath 输出图片文件路径
- * @returns {boolean} 是否成功
- */
-async function srImage(path, outPath) {
-  let p = exec(
-    config["Super-Resolution"]
-      .replace("$input", path)
-      .replace("$output", outPath)
-  );
-  return !p.code;
-}
-async function setBg(path) {
-  exec("python ./setBg.py " + path);
-}
 
 module.exports = {
-  setBg,
-  srImage,
-  srImage,
   getImage,
   setTags,
   getArg,

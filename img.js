@@ -1,5 +1,5 @@
-const { getImage, srImage, setTags } = require("./image");
-
+const { getImage, setTags } = require("./app/image");
+const { srImage } = require("./app/utils/utils");
 
 setTags('nipples, ejaculation, cum, pubic_hair, clitoris, pussy_juice, female_ejaculation, nude,medium breasts','');
 async function main() {

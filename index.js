@@ -1,4 +1,5 @@
-const { getImage, srImage, setBg } = require("./image");
+const { getImage } = require("./app/image");
+const { setBg, srImage } = require("./app/utils/utils");
 
 async function main() {
   var path = await getImage();
