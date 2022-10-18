@@ -1,4 +1,4 @@
-const config = require("../config.json");
+let config = require("../config.json");
 
 const defaultConfig = {
   "server-type-all": [
@@ -31,7 +31,7 @@ if (!config["Super-Resolution"])
   config["Super-Resolution"] = defaultConfig["Super-Resolution"];
 if (!config["server-type-all"])
   config["server-type-all"] = defaultConfig["server-type-all"];
-const server = config["server-type-all"].find(
+let server = config["server-type-all"].find(
   (f) => f.name == config["server-type"]
 );
 if (!server) {

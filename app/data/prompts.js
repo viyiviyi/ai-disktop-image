@@ -1,3 +1,6 @@
+const axios = require("axios");
+const cheerio = require("cheerio");
+
 const prompts = [
   {
     title: "常用",
@@ -2003,6 +2006,7 @@ const prompts = [
     ],
   },
 ];
+
 module.exports.prompts = prompts;
 module.exports.promptsRandom = function promptsRandom(tags = prompts) {
   return tags
@@ -2016,14 +2020,68 @@ module.exports.promptsRandom = function promptsRandom(tags = prompts) {
           arr.push(cache[randomNum(cache.length - 1, 0)]);
         }
         return promptsRandom(arr);
-      } else if(v.value){
+      } else if (v.value) {
         return v.value;
       }
-    }).filter(v=>v)
+    })
+    .filter((v) => v)
     .join(",");
 };
 
 function randomNum(max, min) {
   const num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
+}
+
+module.exports.updatePrompts = function updatePrompts() {
+  axios
+    .get("https://wolfchen.top/tag/?from=zhihu")
+    .then((d) => d.data)
+    .then((html) => {
+      let $ = cheerio.load(html);
+      let data = $(".layui-tab.layui-tab-card")
+        .find(".layui-tab-title")
+        .find("li")
+        .map(function () {
+          return $(this).text();
+        })
+        .map((idx, txt) => {
+          return {
+            title: txt,
+            enable: true,
+            max: 2,
+            min: 2,
+            list: $(".layui-tab-content .layui-tab-item")
+              .eq(idx)
+              .find(".layui-form")
+              .map(function () {
+                return {
+                  enable: true,
+                  max: 2,
+                  min: 2,
+                  title: $(this).prev("p").text().trim(),
+                  list: $(this)
+                    .find("input")
+                    .map(function () {
+                      return {
+                        value: $(this).val().trim() || "default",
+                        title: $(this)
+                          .prop("title")
+                          .trim()
+                          .replace($(this).val().trim(), ""),
+                        enable: true,
+                      };
+                    })
+                    .toArray(),
+                };
+              })
+              .toArray(),
+          };
+        })
+        .toArray();
+      promptsUpload(data);
+    });
+};
+function promptsUpload(data) {
+  console.log(data);
 }

@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
-const 元素法典 = require("./data/元素法典");
+const { 元素法典 } = require("./data/元素法典");
 const { server } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
 
