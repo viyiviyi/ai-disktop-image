@@ -1,5 +1,6 @@
 const { join } = require("path");
 const { exec } = require("shelljs");
+const { config } = require("../config");
 
 /**
  * 设置图片为桌面背景
