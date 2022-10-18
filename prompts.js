@@ -1614,7 +1614,7 @@ const prompts = [
   },
   {
     title: "R18",
-    enable: true,
+    enable: false,
     max: 2,
     min: 2,
     list: [
@@ -2004,7 +2004,7 @@ const prompts = [
   },
 ];
 module.exports.prompts = prompts;
-module.exports.promptsRdom = function promptsRdom(tags = prompts) {
+module.exports.promptsRandom = function promptsRandom(tags = prompts) {
   return tags
     .filter((f) => f.enable)
     .map((v) => {
@@ -2015,7 +2015,7 @@ module.exports.promptsRdom = function promptsRdom(tags = prompts) {
         for (let i = 0; i < num; i++) {
           arr.push(cache[randomNum(cache.length - 1, 0)]);
         }
-        return promptsRdom(arr);
+        return promptsRandom(arr);
       } else if(v.value){
         return v.value;
       }

@@ -4,7 +4,7 @@ const join = require("path").join;
 const exec = require("shelljs").exec;
 const 元素法典 = require("./元素法典");
 const config = require("./config.json");
-const { promptsRdom } = require('./prompts')
+const { promptsRandom: promptsRdom } = require('./prompts')
 
 const defaultConfig = {
   "server-type-all": [
