@@ -52,7 +52,7 @@ module.exports.updatePrompts = function updatePrompts() {
             enable: true,
             max: 2,
             min: 2,
-            UNNSFW: false,
+            NSFW: false,
             list: $(".layui-tab-content .layui-tab-item")
               .eq(idx)
               .find(".layui-form")
@@ -61,7 +61,7 @@ module.exports.updatePrompts = function updatePrompts() {
                   enable: true,
                   max: 2,
                   min: 2,
-                  UNNSFW: false,
+                  NSFW: false,
                   title: $(this).prev("p").text().trim() || txt + "-" + i,
                   list: $(this)
                     .find("input")
@@ -71,7 +71,7 @@ module.exports.updatePrompts = function updatePrompts() {
                         value: val,
                         title: $(this).prop("title").trim().replace(val, ""),
                         enable: true,
-                        UNNSFW: false,
+                        NSFW: false,
                       };
                     })
                     .toArray(),
@@ -94,7 +94,7 @@ function promptsUpload(data) {
       let item = findPrompt(prompts, undefined, v.value);
       if (item) {
         v.enable = item.enable;
-        v.UNNSFW = item.UNNSFW;
+        v.UNNSFW = item.NSFW;
       }
     } else if (v.title) {
       let item = findPrompt(prompts, v.title);
@@ -102,7 +102,7 @@ function promptsUpload(data) {
         v.enable = item.enable;
         v.max = item.max;
         v.min = item.min;
-        v.UNNSFW = item.UNNSFW;
+        v.UNNSFW = item.NSFW;
       }
     }
     if (v.list) promptsUpload(v.list);
