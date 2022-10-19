@@ -1,9 +1,11 @@
 const { runEnv } = require("./app/config");
-const { getImage } = require("./app/image");
+const { getImage, setTags } = require("./app/image");
 const { setBg, srImage } = require("./app/utils/utils");
 
 async function main() {
+  setTags('an extremely delicate and beautiful girl,an extremely delicate and beautiful,beautiful detailed sky,extremely detailed CG unity 8k wallpaper')
   runEnv.randomTag = false;
+  runEnv.magic = false;
   var path = await getImage();
   console.log("image path:", path);
   if (!path) return;
