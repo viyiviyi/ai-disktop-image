@@ -56,13 +56,13 @@ module.exports.updatePrompts = function updatePrompts() {
             list: $(".layui-tab-content .layui-tab-item")
               .eq(idx)
               .find(".layui-form")
-              .map(function () {
+              .map(function (i) {
                 return {
                   enable: true,
                   max: 2,
                   min: 2,
                   UNNSFW: false,
-                  title: $(this).prev("p").text().trim() || txt + "-default",
+                  title: $(this).prev("p").text().trim() || txt + "-" + i,
                   list: $(this)
                     .find("input")
                     .map(function () {
@@ -102,7 +102,7 @@ function promptsUpload(data) {
         v.enable = item.enable;
         v.max = item.max;
         v.min = item.min;
-        v.UNNSFW = item.UNNSFW || false;
+        v.UNNSFW = item.UNNSFW;
       }
     }
     if (v.list) promptsUpload(v.list);
@@ -113,7 +113,7 @@ function findPrompt(prompts, title, value) {
   let item = undefined;
   prompts.forEach((v) => {
     if (value && v.value && value == value) item = v;
-    else if (title && v.title == title) item = v;
+    else if (title && v.title && v.title == title) item = v;
     else if (v.list) findPrompt(v.list, title, value);
   });
   return item;
