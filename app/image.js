@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
-const { 元素法典 } = require("./data/元素法典");
+const 元素法典 = require("./data/元素法典.json");
 const { server, runEnv } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
 
@@ -17,40 +17,23 @@ function getMagic() {
 }
 function getArg() {
   const [prompt, unprompt] = runEnv.magic ? getMagic() : ["", ""];
-  const tags = runEnv.randomTag ? promptsRdom() : "";
-  const unTags = "";
+  let tags = runEnv.randomTag ? promptsRdom() : "";
+  let unTags = "";
+  tags += defaultPrompts.prompt;
+  unTags += defaultPrompts.unprompt;
+  if (server.isMagic) {
+    tags += "," + prompt;
+    unTags += "," + unprompt;
+  }
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
-  const arg = Object.assign({}, server.arg);
-  Object.keys(arg).forEach((key) => {
-    if (typeof arg[key] === "string") {
-      if (arg[key].includes("$seed")) {
-        arg[key] = seed;
-      } else if (arg[key].includes("$unprompt")) {
-        arg[key] = arg[key].replace(
-          "$unprompt",
-          server.isMagic ? unprompt + "," + unTags : unTags
-        );
-        arg[key] += "," + defaultPrompts.unprompt;
-        let set = new Set();
-        arg[key].split(",").forEach((v) => {
-          set.add(v);
-        });
-        arg[key] = Array.from(set).join(",");
-      } else if (arg[key].includes("$prompts")) {
-        arg[key] = arg[key].replace(
-          "$prompts",
-          server.isMagic ? prompt + "," + tags : tags
-        );
-        arg[key] += "," + defaultPrompts.prompt;
-        let set = new Set();
-        arg[key].split(",").forEach((v) => {
-          set.add(v);
-        });
-        arg[key] = Array.from(set).join(",");
-      }
-    }
-  });
+  const arg = JSON.parse(
+    JSON.stringify(server.arg)
+      .replace(/"\$seed"/g, seed)
+      .replace(/\$seed/g, seed)
+      .replace(/\$unprompt/g, unTags)
+      .replace(/\$prompts/, tags)
+  );
   return arg;
 }
 async function saveImage(base64, path = "images") {

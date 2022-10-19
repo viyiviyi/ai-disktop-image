@@ -1,2 +1,2 @@
 import os
-os.system('node index.js')
+os.system('start /B node index.js')
