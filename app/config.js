@@ -20,7 +20,7 @@ const defaultConfig = {
       },
     },
   ],
-  "server-type": "naifu",
+  "server-type": ["naifu"],
   "Super-Resolution": "ncnn -i $input -o $output",
 };
 
@@ -31,8 +31,8 @@ if (!config["Super-Resolution"])
   config["Super-Resolution"] = defaultConfig["Super-Resolution"];
 if (!config["server-type-all"])
   config["server-type-all"] = defaultConfig["server-type-all"];
-let server = config["server-type-all"].find(
-  (f) => f.name == config["server-type"]
+let server = config["server-type-all"].filter(
+  (f) => config["server-type"].findIndex((name) => name == f.name) != -1
 );
 if (!server) {
   server = config["server-type-all"].length

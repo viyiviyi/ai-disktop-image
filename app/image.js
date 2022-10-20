@@ -27,13 +27,15 @@ function getArg() {
   }
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
-  const arg = JSON.parse(
-    JSON.stringify(server.arg)
-      .replace(/"\$seed"/g, seed)
-      .replace(/\$seed/g, seed)
-      .replace(/\$unprompt/g, unTags)
-      .replace(/\$prompts/, tags)
-  );
+  const arg = server.arg.map((str) => {
+    return JSON.parse(
+      JSON.stringify(str)
+        .replace(/"\$seed"/g, seed)
+        .replace(/\$seed/g, seed)
+        .replace(/\$unprompt/g, unTags)
+        .replace(/\$prompts/, tags)
+    );
+  });
   return arg;
 }
 async function saveImage(base64, path = "images") {
@@ -56,22 +58,28 @@ function setTags(prompts, unprompt) {
   defaultPrompts.unprompt = unprompt || "";
 }
 
-async function getImage(path = undefined, NSFW = true) {
-  var arg = getArg(NSFW);
+async function getImage(path = undefined) {
+  var arg = getArg();
   console.log("arg:", arg);
-  return await axios
-    .post(server.url, arg)
-    .then((res) => {
-      return res.data;
-    })
-    .then((data) => {
-      if (typeof data === "object" && data.error) console.error(data.error);
-      if (typeof data !== "string") return;
-      let d = data.split("\n").find((f) => f.startsWith("data:"));
-      if (!d) return;
-      let base64 = d.split(":")[1];
-      return saveImage(base64, path);
-    });
+  if (arg.length == 0) return console.error("参数不能为空");
+  let result = "";
+  for (let index = 0; index < arg.length; index++) {
+    if (result) return result;
+    result = await axios
+      .post(server.url, arg[0])
+      .then((res) => {
+        return res.data;
+      })
+      .then((data) => {
+        if (typeof data === "object" && data.error) console.error(data.error);
+        if (typeof data !== "string") return;
+        let d = data.split("\n").find((f) => f.startsWith("data:"));
+        if (!d) return;
+        let base64 = d.split(":")[1];
+        return saveImage(base64, path);
+      })
+      .catch((e) => null);
+  }
 }
 
 module.exports = {

@@ -21,7 +21,7 @@ config = defaultConfig = {
       },
     },
   ],
-  "server-type": "naifu",
+  "server-type": ["naifu"],
   "Super-Resolution": "ncnn -i $input -o $output",
 }
 
