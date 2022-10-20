@@ -81,6 +81,7 @@ async function getImage(path = undefined) {
       })
       .catch(() => null);
   }
+  return result;
 }
 
 module.exports = {
