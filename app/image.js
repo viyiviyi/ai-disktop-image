@@ -60,11 +60,12 @@ function setTags(prompts, unprompt) {
 
 async function getImage(path = undefined) {
   var arg = getArg();
-  console.log("arg:", arg);
+  // console.log("arg:", arg);
   if (arg.length == 0) return console.error("参数不能为空");
   let result = "";
   for (let index = 0; index < arg.length; index++) {
     if (result) return result;
+    console.log(server[index].url, arg[index]);
     result = await axios
       .post(server[index].url, arg[index])
       .then((res) => {
@@ -78,7 +79,7 @@ async function getImage(path = undefined) {
         let base64 = d.split(":")[1];
         return saveImage(base64, path);
       })
-      .catch((e) => console.error(e));
+      .catch(() => null);
   }
 }
 
