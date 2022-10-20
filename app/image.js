@@ -27,9 +27,9 @@ function getArg() {
   }
   const seed = Number(parseInt(Math.random() * 4294967296 - 1));
 
-  const arg = server.arg.map((str) => {
+  const arg = server.map((ser) => {
     return JSON.parse(
-      JSON.stringify(str)
+      JSON.stringify(ser.arg)
         .replace(/"\$seed"/g, seed)
         .replace(/\$seed/g, seed)
         .replace(/\$unprompt/g, unTags)
@@ -66,7 +66,7 @@ async function getImage(path = undefined) {
   for (let index = 0; index < arg.length; index++) {
     if (result) return result;
     result = await axios
-      .post(server.url, arg[0])
+      .post(server[index].url, arg[index])
       .then((res) => {
         return res.data;
       })
@@ -78,7 +78,7 @@ async function getImage(path = undefined) {
         let base64 = d.split(":")[1];
         return saveImage(base64, path);
       })
-      .catch((e) => null);
+      .catch((e) => console.error(e));
   }
 }
 
