@@ -9,5 +9,5 @@ console.log(getArg())
 // setBg("E:\\projects\\nodejs\\windowBgImageAI\\images\\1665983526066.png");
 
 
-
+console.log(require.main.path)
 // updatePrompts()

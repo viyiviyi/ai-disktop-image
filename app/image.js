@@ -39,7 +39,7 @@ function getArg() {
 }
 async function saveImage(base64, path = "images") {
   try {
-    var dir = join(process.cwd(), path);
+    var dir = join(require.main.path, path);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
     }
