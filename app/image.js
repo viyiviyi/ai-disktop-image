@@ -21,13 +21,12 @@ function getArg() {
   let unTags = "";
   tags += defaultPrompts.prompt;
   unTags += defaultPrompts.unprompt;
-  if (server.isMagic) {
-    tags += "," + prompt;
-    unTags += "," + unprompt;
-  }
-  const seed = Number(parseInt(Math.random() * 4294967296 - 1));
-
   const arg = server.map((ser) => {
+    if (ser.isMagic) {
+      tags += "," + prompt;
+      unTags += "," + unprompt;
+    }
+    const seed = Number(parseInt(Math.random() * 4294967296 - 1));
     return JSON.parse(
       JSON.stringify(ser.arg)
         .replace(/"\$seed"/g, seed)
