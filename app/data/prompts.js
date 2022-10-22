@@ -111,10 +111,12 @@ function promptsUpload(data) {
 
 function findPrompt(prompts, title, value) {
   let item = undefined;
-  prompts.forEach((v) => {
-    if (value && v.value && value == value) item = v;
+  for (let index = 0; index < prompts.length; index++) {
+    const v = prompts[index];
+    if (value && v.value && v.value == value) item = v;
     else if (title && v.title && v.title == title) item = v;
-    else if (v.list) findPrompt(v.list, title, value);
-  });
+    else if (v.list) item = findPrompt(v.list, title, value);
+    if (item) return item;
+  }
   return item;
 }
