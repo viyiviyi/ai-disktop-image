@@ -4,7 +4,7 @@ const { setBg, srImage } = require("./app/utils/utils");
 
 async function main() {
   console.log(new Date().toLocaleString())
-  setTags('an extremely delicate and beautiful girl,an extremely delicate and beautiful,beautiful detailed sky,extremely detailed CG unity 8k wallpaper')
+  setTags('{{{an extremely delicate and beautiful girl}}},an extremely delicate and beautiful,beautiful detailed sky,extremely detailed CG unity 8k wallpaper')
   runEnv.randomTag = false;
   runEnv.magic = true;
   var path = await getImage();

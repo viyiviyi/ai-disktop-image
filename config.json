@@ -53,5 +53,5 @@
     }
   ],
   "server-type": ["naifu_k_euler_ancestral","naifu_k_euler_ancestral_local"],
-  "Super-Resolution": "ncnn -i $input -o $output"
+  "Super-Resolution": "ncnn -i $input -o $output -s 2"
 }

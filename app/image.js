@@ -23,20 +23,26 @@ function getArg() {
   unTags += defaultPrompts.unprompt;
   const arg = server.map((ser) => {
     if (ser.isMagic) {
-      tags += "," + prompt;
-      unTags += "," + unprompt;
+      ser.tags = removeDuplicates((tags += "," + prompt));
+      ser.unTags = removeDuplicates((unTags += "," + unprompt));
     }
     const seed = Number(parseInt(Math.random() * 4294967296 - 1));
     return JSON.parse(
       JSON.stringify(ser.arg)
         .replace(/"\$seed"/g, seed)
         .replace(/\$seed/g, seed)
-        .replace(/\$unprompt/g, unTags)
-        .replace(/\$prompts/, tags)
+        .replace(/\$unprompt/g, ser.unTags)
+        .replace(/\$prompts/, ser.tags)
     );
   });
   return arg;
 }
+function removeDuplicates(tags) {
+  let rd = new Set();
+  tags.split(",").forEach((v) => rd.add(v.trim()));
+  return Array.from(rd).join(",");
+}
+
 async function saveImage(base64, path = "images") {
   try {
     var dir = join(require.main.path, path);
