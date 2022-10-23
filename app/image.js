@@ -23,23 +23,23 @@ function getArg() {
   unTags += defaultPrompts.unprompt;
   const arg = server.map((ser) => {
     if (ser.isMagic) {
-      ser.tags = removeDuplicates((tags += "," + prompt));
-      ser.unTags = removeDuplicates((unTags += "," + unprompt));
+      ser.tags = tags += "," + prompt;
+      ser.unTags = unTags += "," + unprompt;
     }
     const seed = Number(parseInt(Math.random() * 4294967296 - 1));
     return JSON.parse(
       JSON.stringify(ser.arg)
         .replace(/"\$seed"/g, seed)
         .replace(/\$seed/g, seed)
-        .replace(/\$unprompt/g, ser.unTags)
-        .replace(/\$prompts/, ser.tags)
+        .replace(/\$unprompt/g, removeDuplicates(ser.unTags))
+        .replace(/\$prompts/, removeDuplicates(ser.tags))
     );
   });
   return arg;
 }
 function removeDuplicates(tags) {
   let rd = new Set();
-  tags.split(",").forEach((v) => rd.add(v.trim()));
+  tags.split(",").map(v=>v.trim()).filter(f=>f).forEach((v) => rd.add(v));
   return Array.from(rd).join(",");
 }
 
