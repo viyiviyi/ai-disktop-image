@@ -5097,7 +5097,7 @@
     },
     {
         "title": "R18",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 2,
         "NSFW": false,
@@ -5441,7 +5441,7 @@
                     {
                         "value": "tamakeri",
                         "title": "蛋疼",
-                        "enable": false,
+                        "enable": true,
                         "NSFW": false,
                         "UNNSFW": false
                     },

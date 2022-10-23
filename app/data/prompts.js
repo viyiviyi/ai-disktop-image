@@ -17,10 +17,13 @@ module.exports.promptsRandom = function promptsRandom(tags = prompts) {
         let cache = [
           ...v.list.filter((v) => (v.enable && runEnv.NSFW ? !v.UNNSFW : true)),
         ];
-        for (let i = 0; i < num; i++) {
-          arr.push(cache[randomNum(cache.length - 1, 0)]);
+        if (cache.length <= num) arr = [...cache];
+        else {
+          for (let i = 0; i < num && i < cache.length; i++) {
+            arr.push(cache[randomNum(cache.length - 1, 0)]);
+          }
+          return promptsRandom(arr);
         }
-        return promptsRandom(arr);
       } else if (v.value) {
         return v.value;
       }
