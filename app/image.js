@@ -84,7 +84,11 @@ async function getImage(path = undefined) {
     const config = {
       headers: {},
     };
-    if (server[index].ngrok && server[index].ngrok.enadle) {
+    if (
+      !server[index].url.startsWith("http") &&
+      server[index].ngrok &&
+      server[index].ngrok.enadle
+    ) {
       let url = await tunnels(server[index].ngrok.token);
       server[index].url = url + server[index].url;
       config.headers["ngrok-skip-browser-warning"] = 0;
