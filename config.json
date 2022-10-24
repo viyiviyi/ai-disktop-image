@@ -18,7 +18,7 @@
       }
     },
     {
-      "url": "https://ngrok.io",
+      "url": "/generate-stream",
       "name": "naifu_k_euler_ancestral_ngrok",
       "isMagic": true,
       "ngrok": {

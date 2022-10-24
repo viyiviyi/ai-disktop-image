@@ -16,7 +16,7 @@ function getMagic() {
   p = 元素法典[Math.floor(Math.random() * 元素法典.length)];
   return p || [];
 }
-function getArg() {
+async function getArg() {
   const [prompt, unprompt] = runEnv.magic ? getMagic() : ["", ""];
   let tags = runEnv.randomTag ? promptsRdom() : "";
   let unTags = "";
@@ -26,11 +26,6 @@ function getArg() {
     if (ser.isMagic) {
       ser.tags = tags += "," + prompt;
       ser.unTags = unTags += "," + unprompt;
-    }
-
-    if (ser.ngrok && ser.ngrok.enadle) {
-      let url = tunnels(ser.ngrok.token);
-      ser.url = url;
     }
     const seed = Number(parseInt(Math.random() * 4294967296 - 1));
     return JSON.parse(
@@ -80,15 +75,23 @@ function setTags(prompts, unprompt) {
 }
 
 async function getImage(path = undefined) {
-  var arg = getArg();
+  var arg = await getArg();
   // console.log("arg:", arg);
   if (arg.length == 0) return console.error("参数不能为空");
   let result = "";
   for (let index = 0; index < arg.length; index++) {
     if (result) return result;
+    const config = {
+      headers: {},
+    };
+    if (server[index].ngrok && server[index].ngrok.enadle) {
+      let url = await tunnels(server[index].ngrok.token);
+      server[index].url = url + server[index].url;
+      config.headers["ngrok-skip-browser-warning"] = 0;
+    }
     console.log(server[index].url, arg[index]);
     result = await axios
-      .post(server[index].url, arg[index])
+      .post(server[index].url, arg[index], config)
       .then((res) => {
         return res.data;
       })
