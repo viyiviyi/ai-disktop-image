@@ -4,7 +4,7 @@ const { tunnels } = require("./app/utils/ngrok");
 const port = 3000;
 
 const server = http.createServer(async (req, res) => {
-  if (req.url.endsWith('ngrok/')) {
+  if (req.url.endsWith("ngrok/")) {
     var url = await tunnels(
       "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
     );
