@@ -4,6 +4,7 @@ const join = require("path").join;
 const 元素法典 = require("./data/元素法典.json");
 const { server, runEnv } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
+const { tunnels } = require("./utils/ngrok");
 
 const defaultPrompts = {
   prompt: "",
@@ -26,6 +27,11 @@ function getArg() {
       ser.tags = tags += "," + prompt;
       ser.unTags = unTags += "," + unprompt;
     }
+
+    if (ser.ngrok && ser.ngrok.enadle) {
+      let url = tunnels(ser.ngrok.token);
+      ser.url = url;
+    }
     const seed = Number(parseInt(Math.random() * 4294967296 - 1));
     return JSON.parse(
       JSON.stringify(ser.arg)
@@ -35,11 +41,21 @@ function getArg() {
         .replace(/\$prompts/, removeDuplicates(ser.tags))
     );
   });
-  return arg;
+  return flatten(arg);
+}
+function flatten(arr) {
+  while (arr.some((i) => Array.isArray(i))) {
+    arr = [].concat(...arr);
+  }
+  return arr;
 }
 function removeDuplicates(tags) {
   let rd = new Set();
-  tags.split(",").map(v=>v.trim()).filter(f=>f).forEach((v) => rd.add(v));
+  tags
+    .split(",")
+    .map((v) => v.trim())
+    .filter((f) => f)
+    .forEach((v) => rd.add(v));
   return Array.from(rd).join(",");
 }
 
