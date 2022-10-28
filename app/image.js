@@ -211,9 +211,7 @@ const argTemplate = {
         1,
         1,
         option.scale,
-        option.seed == -1
-          ? Number(parseInt(Math.random() * 4294967296 - 1))
-          : option.seed,
+        option.seed,
         -1,
         0,
         0,

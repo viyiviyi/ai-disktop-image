@@ -16,11 +16,12 @@ module.exports.setBg = async function setBg(path) {
  * @param {string} outPath 输出图片文件路径
  * @returns {boolean} 是否成功
  */
- module.exports.srImage = async function srImage(path, outPath) {
+module.exports.srImage = async function srImage(path, outPath) {
+  if (!config["Super-Resolution"]) return true;
   let p = exec(
     config["Super-Resolution"]
       .replace("$input", path)
       .replace("$output", outPath)
   );
   return !p.code;
-}
+};
