@@ -16,34 +16,28 @@ function getMagic() {
   p = 元素法典[Math.floor(Math.random() * 元素法典.length)];
   return p || [];
 }
-async function getArg() {
+async function getArg(ser = server[0]) {
   const [prompt, unprompt] = runEnv.magic ? getMagic() : ["", ""];
   let tags = runEnv.randomTag ? promptsRdom() : "";
   let unTags = "";
   tags += defaultPrompts.prompt;
   unTags += defaultPrompts.unprompt;
-  const arg = server.map((ser) => {
-    if (ser.isMagic) {
-      ser.tags = tags += "," + prompt;
-      ser.unTags = unTags += "," + unprompt;
-    }
-    const seed = Number(parseInt(Math.random() * 4294967296 - 1));
-    return JSON.parse(
-      JSON.stringify(ser.arg)
-        .replace(/"\$seed"/g, seed)
-        .replace(/\$seed/g, seed)
-        .replace(/\$unprompt/g, removeDuplicates(ser.unTags))
-        .replace(/\$prompts/, removeDuplicates(ser.tags))
-    );
-  });
-  return flatten(arg);
-}
-function flatten(arr) {
-  while (arr.some((i) => Array.isArray(i))) {
-    arr = [].concat(...arr);
+  if (ser.isMagic) {
+    ser.tags = tags + tags + "," + prompt;
+    ser.unTags = unTags + unTags + "," + unprompt;
   }
-  return arr;
+  const option = Object.assign({}, ser.option || {}, {
+    prompts: removeDuplicates(ser.tags),
+    unprompts: removeDuplicates(ser.unTags),
+  });
+  switch (ser.apiType) {
+    case "naifu":
+      return argTemplate.naifu(option);
+    case "stable-diffusion":
+      return argTemplate.stableDiffusion(option);
+  }
 }
+
 function removeDuplicates(tags) {
   let rd = new Set();
   tags
@@ -75,11 +69,8 @@ function setTags(prompts, unprompt) {
 }
 
 async function getImage(path = undefined) {
-  var arg = await getArg();
-  // console.log("arg:", arg);
-  if (arg.length == 0) return console.error("参数不能为空");
   let result = "";
-  for (let index = 0; index < arg.length; index++) {
+  for (let index = 0; index < server.length; index++) {
     if (result) return result;
     const config = {
       headers: {},
@@ -93,6 +84,7 @@ async function getImage(path = undefined) {
       server[index].url = url + server[index].url;
       config.headers["ngrok-skip-browser-warning"] = 0;
     }
+    const arg = getArg(server[index]);
     console.log(server[index].url, arg[index]);
     result = await axios
       .post(server[index].url, arg[index], config)
@@ -116,4 +108,131 @@ module.exports = {
   getImage,
   setTags,
   getArg,
+};
+
+const argTemplate = {
+  naifu: function (
+    option = {
+      prompts: "",
+      unprompts: "",
+      seed: -1,
+      width: 1024,
+      height: 576,
+      scale: 12,
+      sampler: "k_euler_ancestral",
+      steps: 28,
+    }
+  ) {
+    option = Object.assign(
+      {
+        prompts: "",
+        unprompts: "",
+        seed: -1,
+        width: 1024,
+        height: 576,
+        scale: 12,
+        sampler: "k_euler_ancestral",
+        steps: 28,
+      },
+      option
+    );
+    return {
+      prompt: option.prompts,
+      width: option.width,
+      height: option.height,
+      scale: option.scale,
+      sampler: samplerMap.naifu[option.sampler],
+      steps: option.steps,
+      seed:
+        option.seed == -1
+          ? Number(parseInt(Math.random() * 4294967296 - 1))
+          : option.seed,
+      n_samples: 1,
+      ucPreset: 0,
+      uc: "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,$unprompt",
+    };
+  },
+  stableDiffusion: function (
+    option = {
+      prompts: "",
+      unprompts: "",
+      seed: -1,
+      width: 1024,
+      height: 576,
+      scale: 12,
+      sampler: "k_euler_ancestral",
+      steps: 28,
+    }
+  ) {
+    option = Object.assign(
+      {
+        prompts: "",
+        unprompts: "",
+        seed: -1,
+        width: 1024,
+        height: 576,
+        scale: 12,
+        sampler: "k_euler_ancestral",
+        steps: 28,
+      },
+      option
+    );
+    return {
+      fn_index: 14,
+      data: [
+        option.prompts,
+        option.unprompts,
+        "None",
+        "None",
+        option.steps,
+        samplerMap.stableDiffusion[option.sampler],
+        false,
+        false,
+        1,
+        1,
+        option.scale,
+        option.seed == -1
+          ? Number(parseInt(Math.random() * 4294967296 - 1))
+          : option.seed,
+        -1,
+        0,
+        0,
+        0,
+        false,
+        option.height,
+        option.height,
+        false,
+        0.7,
+        0,
+        0,
+        "None",
+        false,
+        false,
+        null,
+        "",
+        "Seed",
+        "",
+        "Nothing",
+        "",
+        true,
+        false,
+        false,
+        null,
+        "",
+        "",
+      ],
+      session_hash: "m4lcbskxh9k",
+    };
+  },
+};
+
+const samplerMap = {
+  naifu: {
+    k_euler: "k_euler",
+    k_euler_ancestral: "k_euler_ancestral",
+  },
+  stableDiffusion: {
+    k_euler: "Euler",
+    k_euler_ancestral: "Euler a",
+  },
 };

@@ -7,6 +7,7 @@ async function main() {
   setTags('{{{an extremely delicate and beautiful girl}}},an extremely delicate and beautiful,beautiful detailed sky,extremely detailed CG unity 8k wallpaper')
   runEnv.randomTag = true;
   runEnv.magic = true;
+  runEnv.NSFW = false;
   var path = await getImage();
   console.log("image path:", path);
   if (!path) return;

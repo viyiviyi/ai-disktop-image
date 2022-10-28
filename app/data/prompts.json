@@ -49,9 +49,9 @@
             },
             {
                 "enable": true,
-                "max": 2,
-                "min": 2,
-                "NSFW": false,
+                "max": 1,
+                "min": 0,
+                "NSFW": true,
                 "title": "R18Tag",
                 "list": [
                     {
@@ -4154,7 +4154,7 @@
                         "value": "no bra",
                         "title": "没胸罩",
                         "enable": true,
-                        "NSFW": false,
+                        "NSFW": true,
                         "UNNSFW": false
                     },
                     {
@@ -4189,7 +4189,7 @@
                         "value": "transparent underwear",
                         "title": "透明内衣",
                         "enable": true,
-                        "NSFW": false,
+                        "NSFW": true,
                         "UNNSFW": false
                     },
                     {
@@ -4238,7 +4238,7 @@
                         "value": "no_panties",
                         "title": "没内裤",
                         "enable": true,
-                        "NSFW": false,
+                        "NSFW": true,
                         "UNNSFW": false
                     },
                     {

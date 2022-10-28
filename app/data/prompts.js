@@ -97,7 +97,7 @@ function promptsUpload(data) {
       let item = findPrompt(prompts, undefined, v.value);
       if (item) {
         v.enable = item.enable;
-        v.UNNSFW = item.NSFW;
+        v.NSFW = item.NSFW;
       }
     } else if (v.title) {
       let item = findPrompt(prompts, v.title);
@@ -105,7 +105,7 @@ function promptsUpload(data) {
         v.enable = item.enable;
         v.max = item.max;
         v.min = item.min;
-        v.UNNSFW = item.NSFW;
+        v.NSFW = item.NSFW;
       }
     }
     if (v.list) promptsUpload(v.list);
