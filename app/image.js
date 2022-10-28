@@ -48,7 +48,7 @@ function removeDuplicates(tags) {
   return Array.from(rd).join(",");
 }
 
-async function saveImage(base64, path = "images") {
+async function saveImage(base64, path = "images", dataType = "base64") {
   try {
     var dir = join(require.main.path, path);
     if (!fs.existsSync(dir)) {
@@ -56,13 +56,38 @@ async function saveImage(base64, path = "images") {
     }
     var fileName = Date.now() + ".png";
     let filePath = join(dir, fileName);
-    fs.writeFileSync(filePath, base64, "base64");
+    fs.writeFileSync(filePath, base64, dataType);
     return filePath;
   } catch (error) {
     console.error(error);
     return null;
   }
 }
+async function downloadImage(url, path = "images") {
+  var dir = join(require.main.path, path);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+  var fileName = Date.now() + ".png";
+  let filePath = join(dir, fileName);
+  const writer = fs.createWriteStream(filePath);
+
+  const response = await axios({
+    url,
+    method: "GET",
+    responseType: "stream",
+  });
+
+  response.data.pipe(writer);
+
+  return new Promise((resolve, reject) => {
+    writer.on("finish", () => {
+      resolve(filePath);
+    });
+    writer.on("error", reject);
+  });
+}
+
 function setTags(prompts, unprompt) {
   defaultPrompts.prompt = prompts || "";
   defaultPrompts.unprompt = unprompt || "";
@@ -72,37 +97,54 @@ async function getImage(path = undefined) {
   let result = "";
   for (let index = 0; index < server.length; index++) {
     if (result) return result;
+    const ser = server[index];
     const config = {
       headers: {},
     };
-    if (
-      !server[index].url.startsWith("http") &&
-      server[index].ngrok &&
-      server[index].ngrok.enadle
-    ) {
-      let url = await tunnels(server[index].ngrok.token);
-      server[index].url = url + server[index].url;
+    if (!ser.url.startsWith("http") && ser.ngrok && ser.ngrok.enadle) {
+      let url = await tunnels(ser.ngrok.token);
+      ser.url = url + ser.url;
       config.headers["ngrok-skip-browser-warning"] = 0;
     }
-    const arg = getArg(server[index]);
-    console.log(server[index].url, arg[index]);
-    result = await axios
-      .post(server[index].url, arg[index], config)
-      .then((res) => {
-        return res.data;
+    const arg = await getArg(ser);
+    console.log(ser.url, arg);
+    result = await await axios
+      .post(ser.url, arg, config)
+      .then((d) => d.data)
+      .then(async (data) => {
+        switch (ser.apiType) {
+          case "naifu":
+            return await parseResult.naifu(data, path);
+          case "stable-diffusion":
+            return await parseResult.sd(data, path);
+        }
       })
-      .then((data) => {
-        if (typeof data === "object" && data.error) console.error(data.error);
-        if (typeof data !== "string") return;
-        let d = data.split("\n").find((f) => f.startsWith("data:"));
-        if (!d) return;
-        let base64 = d.split(":")[1];
-        return saveImage(base64, path);
-      })
-      .catch(() => null);
+      .catch(async () => null);
   }
   return result;
 }
+
+const parseResult = {
+  async naifu(data, path) {
+    if (typeof data === "object" && data.error) console.error(data.error);
+    if (typeof data !== "string") return;
+    let d = data.split("\n").find((f) => f.startsWith("data:"));
+    if (!d) return;
+    let base64 = d.split(":")[1];
+    return saveImage(base64, path);
+  },
+  async sd(data, path) {
+    if (data.data) data = data.data;
+    if (!Array.isArray(data)) {
+      return console.error("error");
+    }
+    data = data[0];
+    if (!Array.isArray(data)) return console.error("error");
+    data = data[0];
+    if (!data.name) console.error("error");
+    return await downloadImage("http://127.0.0.1:7860/file=" + data.name, path);
+  },
+};
 
 module.exports = {
   getImage,
@@ -111,18 +153,7 @@ module.exports = {
 };
 
 const argTemplate = {
-  naifu: function (
-    option = {
-      prompts: "",
-      unprompts: "",
-      seed: -1,
-      width: 1024,
-      height: 576,
-      scale: 12,
-      sampler: "k_euler_ancestral",
-      steps: 28,
-    }
-  ) {
+  naifu: function (option = {}) {
     option = Object.assign(
       {
         prompts: "",
@@ -152,18 +183,7 @@ const argTemplate = {
       uc: "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,$unprompt",
     };
   },
-  stableDiffusion: function (
-    option = {
-      prompts: "",
-      unprompts: "",
-      seed: -1,
-      width: 1024,
-      height: 576,
-      scale: 12,
-      sampler: "k_euler_ancestral",
-      steps: 28,
-    }
-  ) {
+  stableDiffusion: function (option = {}) {
     option = Object.assign(
       {
         prompts: "",
@@ -200,7 +220,7 @@ const argTemplate = {
         0,
         false,
         option.height,
-        option.height,
+        option.width,
         false,
         0.7,
         0,
