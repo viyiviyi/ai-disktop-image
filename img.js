@@ -1,11 +1,12 @@
-const { runEnv } = require("./app/config");
+const { runEnv, defaultPrompts } = require("./app/config");
 const { getImage, setTags } = require("./app/image");
 const { srImage } = require("./app/utils/utils");
 
 runEnv.NSFW = false;
 setTags(
-  "nude,naked,large breasts,Expose the chest,1girl,1",
-  ""
+  defaultPrompts.prompt +
+    "," +
+    "nude,naked,large breasts,Expose the chest,1girl,1"
 );
 async function main() {
   let i = 100;

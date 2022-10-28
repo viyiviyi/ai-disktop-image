@@ -2,14 +2,9 @@ const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
 const 元素法典 = require("./data/元素法典.json");
-const { server, runEnv } = require("./config");
+const { server, runEnv, defaultPrompts } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
 const { tunnels } = require("./utils/ngrok");
-
-const defaultPrompts = {
-  prompt: "",
-  unprompt: "",
-};
 
 function getMagic() {
   let p = ["", ""];

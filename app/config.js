@@ -6,17 +6,22 @@ const defaultConfig = {
       url: "http://localhost:7860/generate-stream",
       name: "naifu",
       isMagic: true,
-      arg: {
-        prompt: "masterpiece, best quality,$prompts",
+      apiType: "naifu",
+      ngrok: {
+        enadle: false,
+        token: "",
+      },
+      defaultPrompts: [
+        "masterpiece, best quality",
+        "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+      ],
+      option: {
+        seed: -1,
         width: 1024,
         height: 576,
         scale: 12,
         sampler: "k_euler_ancestral",
         steps: 28,
-        seed: "$seed",
-        n_samples: 1,
-        ucPreset: 0,
-        uc: "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,$unprompt",
       },
     },
   ],
@@ -40,13 +45,18 @@ if (!server) {
     : defaultConfig["server-type-all"][0];
 }
 const runEnv = {
-  NSFW: true,
-  randomTag: true,
-  magic: true,
+  NSFW: config.NSFW,
+  randomTag: config.randomTag,
+  magic: config.magic,
+};
+const defaultPrompts = {
+  prompt: config["defaultPrompts.prompt"],
+  unprompt: config["defaultPrompts.unprompt"],
 };
 
 module.exports = {
   config,
   server,
   runEnv,
+  defaultPrompts,
 };

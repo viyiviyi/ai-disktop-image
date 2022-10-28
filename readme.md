@@ -22,8 +22,6 @@
         "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
       ],
       "option": { // 一些参数配置
-        "prompts": "",// 正面tag
-        "unprompts": "",// 反面tag
         "seed": -1,// 种子数 -1表示随机
         "width": 1024, // 图片宽
         "height": 576, // 图片高 不用设置太高，可以配合超分辨率功能放大
@@ -59,6 +57,11 @@
       }
     }
   ],
+  "defaultPrompts.prompt": "", // 默认正面tag，会增加到所有api
+  "defaultPrompts.unprompt": "", // 默认负面tag，会增加到所有api
+  "randomTag": true, // 开启随机tag
+  "magic": true,// 开启魔法书 优先级高于api
+  "NSFW": false,// 禁止色色 
   "server-type": [ // 启用的api ，会按顺序调用直到获取到图片
     "naifu_k_euler_ancestral_ngrok",
     "stable-diffusion_local",

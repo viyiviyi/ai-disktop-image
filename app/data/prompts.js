@@ -9,13 +9,13 @@ let prompts = require("./prompts.json");
 module.exports.prompts = prompts;
 module.exports.promptsRandom = function promptsRandom(tags = prompts) {
   return tags
-    .filter((f) => (f.enable && runEnv.NSFW ? !f.UNNSFW : true))
+    .filter((f) => (f.enable && runEnv.NSFW ? !f.NSFW : true))
     .map((v) => {
       if (v.list) {
         let num = v.min >= v.max ? v.min : randomNum(v.max, v.min);
         let arr = [];
         let cache = [
-          ...v.list.filter((v) => (v.enable && runEnv.NSFW ? !v.UNNSFW : true)),
+          ...v.list.filter((v) => (v.enable && runEnv.NSFW ? !v.NSFW : true)),
         ];
         if (cache.length <= num) arr = [...cache];
         else {

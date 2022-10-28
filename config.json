@@ -10,8 +10,8 @@
         "token": "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
       },
       "defaultPrompts": [
-        "masterpiece, best quality",
-        "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
+        "",
+        ""
       ],
       "option": {
         "sampler": "k_euler_ancestral"
@@ -23,8 +23,8 @@
       "isMagic": true,
       "apiType": "naifu",
       "defaultPrompts": [
-        "masterpiece, best quality",
-        "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
+        "",
+        ""
       ],
       "option": {
         "sampler": "k_euler_ancestral"
@@ -35,10 +35,7 @@
       "name": "stable-diffusion_local",
       "isMagic": true,
       "apiType": "stable-diffusion",
-      "defaultPrompts": [
-        "masterpiece, best quality",
-        "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
-      ],
+      "defaultPrompts": ["", ""],
       "option": {
         "sampler": "k_euler_ancestral"
       }
@@ -49,5 +46,10 @@
     "stable-diffusion_local",
     "naifu_k_euler_ancestral_local"
   ],
+  "defaultPrompts.prompt": "masterpiece, best quality",
+  "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+  "randomTag": true,
+  "magic": true,
+  "NSFW": false,
   "Super-Resolution": "ncnn -i $input -o $output -s 2"
 }
