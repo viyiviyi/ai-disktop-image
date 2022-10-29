@@ -6,6 +6,8 @@
 - 需要自己准备超分辨率的软件 默认配置里用的 realesrgan-ncnn-vulkan <https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan>
 - 暂时只有windows的设置壁纸功能，如果要加其他平台的，需要在 app/utils/setBg.py文件内写兼容
 
+- **sd的api还是算了吧，这个东西暂的接口是变化的**
+
 # config 文件说明
 ``` javascript
 {

@@ -193,7 +193,7 @@ const argTemplate = {
       option
     );
     return {
-      fn_index: 14,
+      fn_index: 15,
       data: [
         option.prompts,
         option.unprompts,
@@ -219,6 +219,14 @@ const argTemplate = {
         0,
         0,
         "None",
+        0.9,
+        5,
+        "0.0001",
+        false,
+        "None",
+        "",
+        0.1,
+        false,
         false,
         false,
         null,
@@ -234,7 +242,7 @@ const argTemplate = {
         "",
         "",
       ],
-      session_hash: "m4lcbskxh9k",
+      session_hash: "cr9ej1d154",
     };
   },
 };

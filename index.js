@@ -7,7 +7,7 @@ async function main() {
   setTags(
     defaultPrompts.prompt +
       "," +
-      "{{{an extremely delicate and beautiful girl}}},beautiful detailed sky,extremely detailed CG unity 8k wallpaper"
+      "(an extremely delicate and beautiful girl:1.33),beautiful detailed sky,extremely detailed CG unity 8k wallpaper"
   );
   var path = await getImage();
   console.log("image path:", path);
