@@ -1,7 +1,9 @@
 - 执行 node index.js 或者 python index.py 更换壁纸
 - 可以配置为windows计划任务，操作是：启动pythonw 参数是 index.py 起始位置是index.py文件所在目录
   
-- 需要python环境
+- 需要python环境 （只调用了一个设置壁纸的功能，如果有其他方案换调即可，主要是找到的其他方案都是改注册表的，感觉不是很优雅，要不然直接在node执行命令改注册表也是可以的）
+- 需要node环境 （准备用python重写或者考虑换一个依赖更少的）
+- 需要自己准备超分辨率的软件 默认配置里用的 realesrgan-ncnn-vulkan <https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan>
 - 暂时只有windows的设置壁纸功能，如果要加其他平台的，需要在 app/utils/setBg.py文件内写兼容
 
 # config 文件说明
