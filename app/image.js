@@ -15,11 +15,11 @@ async function getArg(ser = server[0]) {
   const [prompt, unprompt] = runEnv.magic ? getMagic() : ["", ""];
   let tags = runEnv.randomTag ? promptsRdom() : "";
   let unTags = "";
-  tags += defaultPrompts.prompt;
-  unTags += defaultPrompts.unprompt;
+  tags += "," + defaultPrompts.prompt;
+  unTags += "," + defaultPrompts.unprompt;
   if (ser.isMagic) {
-    ser.tags = tags + tags + "," + prompt;
-    ser.unTags = unTags + unTags + "," + unprompt;
+    ser.tags = tags + "," + prompt;
+    ser.unTags = unTags + "," + unprompt;
   }
   const option = Object.assign({}, ser.option || {}, {
     prompts: removeDuplicates(ser.tags),
