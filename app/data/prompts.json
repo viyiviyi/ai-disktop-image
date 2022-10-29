@@ -98,14 +98,14 @@
     {
         "title": "环境",
         "enable": true,
-        "max": 0,
-        "min": 2,
+        "max": 2,
+        "min": 1,
         "NSFW": false,
         "list": [
             {
                 "enable": true,
                 "max": 1,
-                "min": 1,
+                "min": 0,
                 "NSFW": false,
                 "title": "朝朝暮暮",
                 "list": [
@@ -164,7 +164,7 @@
             {
                 "enable": true,
                 "max": 1,
-                "min": 1,
+                "min": 0,
                 "NSFW": false,
                 "title": "日月星辰",
                 "list": [
