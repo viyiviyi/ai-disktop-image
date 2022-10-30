@@ -114,7 +114,7 @@ async function getImage(path = undefined) {
             return await parseResult.sd(data, path);
         }
       })
-      .catch(async () => null);
+      .catch(async (err) => console.error(err));
   }
   return result;
 }

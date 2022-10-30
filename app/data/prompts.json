@@ -4147,7 +4147,7 @@
                 "enable": true,
                 "max": 2,
                 "min": 1,
-                "NSFW": false,
+                "NSFW": true,
                 "title": "服装-1",
                 "list": [
                     {
