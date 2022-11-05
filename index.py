@@ -1,2 +1,2 @@
 import os
-os.system('cmd /C start /B node index.js')
+os.popen('node index.js').read()

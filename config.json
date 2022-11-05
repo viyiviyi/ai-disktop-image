@@ -48,7 +48,7 @@
   ],
   "defaultPrompts.prompt": "masterpiece, best quality",
   "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-  "randomTag": true,
+  "randomTag": false,
   "magic": true,
   "NSFW": false,
   "Super-Resolution": "ncnn -i $input -o $output -s 2"
