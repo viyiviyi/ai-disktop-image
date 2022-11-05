@@ -31,7 +31,7 @@
       }
     },
     {
-      "url": "http://127.0.0.1:7860/api/predict",
+      "url": "http://127.0.0.1:7860/sdapi/v1/txt2img",
       "name": "stable-diffusion_local",
       "isMagic": true,
       "apiType": "stable-diffusion",
@@ -42,7 +42,6 @@
     }
   ],
   "server-type": [
-    "naifu_k_euler_ancestral_ngrok",
     "stable-diffusion_local",
     "naifu_k_euler_ancestral_local"
   ],

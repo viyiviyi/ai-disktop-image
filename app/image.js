@@ -58,6 +58,7 @@ async function saveImage(base64, path = "images", dataType = "base64") {
     return null;
   }
 }
+// eslint-disable-next-line no-unused-vars
 async function downloadImage(url, path = "images") {
   var dir = join(require.main.path, path);
   if (!fs.existsSync(dir)) {
@@ -129,15 +130,18 @@ const parseResult = {
     return saveImage(base64, path);
   },
   async sd(data, path) {
-    if (data.data) data = data.data;
-    if (!Array.isArray(data)) {
+    if (!data.images) return console.error("error");
+    if (!Array.isArray(data.images) || data.images.length == 0)
       return console.error("error");
-    }
-    data = data[0];
-    if (!Array.isArray(data)) return console.error("error");
-    data = data[0];
-    if (!data.name) console.error("error");
-    return await downloadImage("http://127.0.0.1:7860/file=" + data.name, path);
+    return saveImage(data.images[0], path);
+    // if (!Array.isArray(data)) {
+    //   return console.error("error");
+    // }
+    // data = data[0];
+    // if (!Array.isArray(data)) return console.error("error");
+    // data = data[0];
+    // if (!data.name) console.error("error");
+    // return await downloadImage("http://127.0.0.1:7860/file=" + data.name, path);
   },
 };
 
@@ -193,57 +197,85 @@ const argTemplate = {
       option
     );
     return {
-      fn_index: 101,
-      data: [
-        option.prompts,
-        option.unprompts,
-        "None",
-        "None",
-        option.steps,
-        samplerMap.stableDiffusion[option.sampler],
-        false,
-        false,
-        1,
-        1,
-        option.scale,
-        option.seed,
-        -1,
-        0,
-        0,
-        0,
-        false,
-        option.height,
-        option.width,
-        false,
-        0.7,
-        0,
-        0,
-        "None",
-        0.9,
-        5,
-        "0.0002",
-        false,
-        "ray_tracing",
-        "delicate,beautiful,girl",
-        0.1,
-        false,
-        false,
-        false,
-        false,
-        "",
-        "Seed",
-        "",
-        "Nothing",
-        "",
-        true,
-        false,
-        false,
-        null,
-        "",
-        "",
-      ],
-      session_hash: "xccjz1ew8he",
+      enable_hr: false,
+      denoising_strength: 0,
+      firstphase_width: 0,
+      firstphase_height: 0,
+      prompt: option.prompts,
+      styles: [],
+      seed: -1,
+      subseed: -1,
+      subseed_strength: 0.69,
+      seed_resize_from_h: -1,
+      seed_resize_from_w: -1,
+      batch_size: 1,
+      n_iter: 1,
+      steps: 28,
+      cfg_scale: 12,
+      width: option.width,
+      height: option.height,
+      restore_faces: false,
+      tiling: false,
+      negative_prompt: option.unprompts,
+      eta: 0,
+      s_churn: 0,
+      s_tmax: 0,
+      s_tmin: 0,
+      s_noise: 0.667,
+      sampler_index: samplerMap.stableDiffusion[option.sampler],
     };
+    // return {
+    //   fn_index: 101,
+    //   data: [
+    //     option.prompts,
+    //     option.unprompts,
+    //     "None",
+    //     "None",
+    //     option.steps,
+    //     samplerMap.stableDiffusion[option.sampler],
+    //     false,
+    //     false,
+    //     1,
+    //     1,
+    //     option.scale,
+    //     option.seed,
+    //     -1,
+    //     0,
+    //     0,
+    //     0,
+    //     false,
+    //     option.height,
+    //     option.width,
+    //     false,
+    //     0.7,
+    //     0,
+    //     0,
+    //     "None",
+    //     0.9,
+    //     5,
+    //     "0.0002",
+    //     false,
+    //     "ray_tracing",
+    //     "delicate,beautiful,girl",
+    //     0.1,
+    //     false,
+    //     false,
+    //     false,
+    //     false,
+    //     "",
+    //     "Seed",
+    //     "",
+    //     "Nothing",
+    //     "",
+    //     true,
+    //     false,
+    //     false,
+    //     null,
+    //     "",
+    //     "",
+    //   ],
+    //   session_hash: "xccjz1ew8he",
+    // };
   },
 };
 
