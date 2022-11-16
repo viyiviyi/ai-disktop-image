@@ -97,7 +97,7 @@
     },
     {
         "title": "环境",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 1,
         "NSFW": false,
@@ -878,7 +878,7 @@
     },
     {
         "title": "人物&角色",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 2,
         "NSFW": false,
@@ -1340,14 +1340,14 @@
     {
         "title": "头发&发饰",
         "enable": true,
-        "max": 2,
-        "min": 2,
+        "max": 3,
+        "min": 1,
         "NSFW": false,
         "list": [
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-0",
                 "list": [
@@ -1413,7 +1413,7 @@
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-1",
                 "list": [
@@ -1605,7 +1605,7 @@
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-2",
                 "list": [
@@ -1762,7 +1762,7 @@
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-3",
                 "list": [
@@ -1877,7 +1877,7 @@
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-4",
                 "list": [
@@ -2006,7 +2006,7 @@
             {
                 "enable": true,
                 "max": 2,
-                "min": 2,
+                "min": 0,
                 "NSFW": false,
                 "title": "头发&发饰-5",
                 "list": [
@@ -2242,7 +2242,7 @@
     },
     {
         "title": "五官",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 2,
         "NSFW": false,
@@ -2597,7 +2597,7 @@
                 "enable": true,
                 "max": 1,
                 "min": 0,
-                "NSFW": false,
+                "NSFW": true,
                 "title": "五官-1",
                 "list": [
                     {
@@ -2643,7 +2643,7 @@
     },
     {
         "title": "表情",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 2,
         "NSFW": false,
@@ -2936,7 +2936,7 @@
     },
     {
         "title": "动作",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 1,
         "NSFW": false,
@@ -3501,7 +3501,7 @@
                 "enable": true,
                 "max": 1,
                 "min": 0,
-                "NSFW": false,
+                "NSFW": true,
                 "title": "动作-1",
                 "list": [
                     {
@@ -3554,7 +3554,7 @@
     },
     {
         "title": "服装",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 1,
         "NSFW": false,
@@ -4559,7 +4559,7 @@
     },
     {
         "title": "装饰",
-        "enable": true,
+        "enable": false,
         "max": 1,
         "min": 1,
         "NSFW": false,
@@ -5097,7 +5097,7 @@
     },
     {
         "title": "R18",
-        "enable": true,
+        "enable": false,
         "max": 2,
         "min": 2,
         "NSFW": true,

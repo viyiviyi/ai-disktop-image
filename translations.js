@@ -11,39 +11,19 @@ async function delay() {
     }, 200);
   });
 }
-const ls = [];
+const translations = [];
 const tags = new Set();
-function addTags(tag, name, type = 0, hotCount = 0) {
+function addTags(tag, name) {
   if (!tags.has(tag)) {
     tags.add(tag);
-    ls.push([tag, type, hotCount, [name]]);
+    translations.push([tag, [name]]);
   } else {
-    let idx = ls.findIndex(
-      (f) => f[0] == tag || f[3].findIndex((sub) => sub == tag) != -1
-    );
-    if (idx > -1 && ls[idx][3].findIndex((f) => f == name) == -1)
-      ls[idx][3].push(name);
+    let idx = translations.findIndex((f) => f[0] == tag);
+    if (idx > -1 && translations[idx][1].findIndex((f) => f == name) == -1)
+      translations[idx][1].push(name);
   }
 }
 async function main() {
-  let list = fs.readFileSync(resolve("./danbooru.csv")).toString().split("\n");
-  let ts = list.map((v) => {
-    let row = v
-      .toLowerCase()
-      .replace(/"/g, "")
-      .split(",")
-      .map((v) => v.trim());
-    return [row[0], row[1], row[2], row.slice(3)];
-  });
-  ts.forEach((v) => {
-    tags.add(v[0]);
-    v[3] &&
-      v[3].forEach((ali) => {
-        tags.add(ali);
-      });
-    ls.push(v);
-  });
-
   let val = await axios
     .get(baseUrl + "/tag/nai-categories")
     .then((d) => d.data)
@@ -86,7 +66,10 @@ async function main() {
     });
   });
 
-  let def = fs.readFileSync("translation-tags.csv").toString().split("\n");
+  let def = fs
+    .readFileSync(resolve("translation-tags.csv"))
+    .toString()
+    .split("\n");
   def
     .filter((v) => v)
     .map((v) => v.trim())
@@ -97,10 +80,10 @@ async function main() {
       addTags(tag, name);
     });
   fs.writeFileSync(
-    "tags.csv",
-    ls
+    "translation.csv",
+    translations
       .map((v) => {
-        v[3] = '"' + v[3].filter((v) => v).join(",") + '"';
+        v[1] = '"' + v[1].filter((v) => v).join(",") + '"';
         return v;
       })
       .join("\n")
@@ -110,7 +93,7 @@ main();
 
 function getFiles(path) {
   let fileList = [];
-  let files = fs.readdirSync(path);
+  let files = fs.readdirSync(resolve(path));
   files.forEach((file) => {
     let fPath = join(path, file);
     let state = fs.statSync(fPath);

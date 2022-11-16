@@ -37,7 +37,7 @@
       "apiType": "stable-diffusion",
       "defaultPrompts": ["", ""],
       "option": {
-        "sampler": "k_euler_ancestral"
+        "sampler": "DPM++ 2S a Karras"
       }
     }
   ],
@@ -47,7 +47,7 @@
   ],
   "defaultPrompts.prompt": "masterpiece, best quality",
   "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-  "randomTag": false,
+  "randomTag": true,
   "magic": true,
   "NSFW": false,
   "Super-Resolution": "ncnn -i $input -o $output -s 2"

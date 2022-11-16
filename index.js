@@ -7,7 +7,7 @@ async function main() {
   setTags(
     defaultPrompts.prompt +
       "," +
-      "(an extremely delicate and beautiful girl:1.33),{extremely delicate and beautiful},{{best quality}},{{intricate }},{ultra-detailed}, {{{ray_tracing}}},{extremely detailed cg unity 8k wallpaper},(large breasts:1.11),"
+      "(an extremely delicate and beautiful girl:1.33),{extremely delicate and beautiful},{{best quality}},{{intricate }},{ultra-detailed}, {{{ray_tracing}}},{extremely detailed cg unity 8k wallpaper},(large breasts:1.11),solo,0-skin"
   );
   var path = await getImage();
   console.log("image path:", path);
