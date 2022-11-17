@@ -37,7 +37,7 @@
       "apiType": "stable-diffusion",
       "defaultPrompts": ["", ""],
       "option": {
-        "sampler": "DPM++ 2S a Karras"
+        "sampler": "Euler a"
       }
     }
   ],
