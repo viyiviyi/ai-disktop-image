@@ -36,6 +36,7 @@ if (!config["Super-Resolution"])
   config["Super-Resolution"] = defaultConfig["Super-Resolution"];
 if (!config["server-type-all"])
   config["server-type-all"] = defaultConfig["server-type-all"];
+config.detalesPrompts = config.detalesPrompts || [];
 let server = config["server-type-all"].filter(
   (f) => config["server-type"].findIndex((name) => name == f.name) != -1
 );
@@ -58,5 +59,5 @@ module.exports = {
   config,
   server,
   runEnv,
-  defaultPrompts,
+  defaultPrompts
 };

@@ -31,6 +31,20 @@
       }
     },
     {
+      "url": "/sdapi/v1/txt2img",
+      "name": "stable-diffusion_ngrok",
+      "isMagic": true,
+      "ngrok": {
+        "enadle": true,
+        "token": "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
+      },
+      "apiType": "stable-diffusion",
+      "defaultPrompts": ["", ""],
+      "option": {
+        "sampler": "Euler a"
+      }
+    },
+    {
       "url": "http://127.0.0.1:7860/sdapi/v1/txt2img",
       "name": "stable-diffusion_local",
       "isMagic": true,
@@ -42,11 +56,14 @@
     }
   ],
   "server-type": [
+    "naifu_k_euler_ancestral_ngrok",
+    "stable-diffusion_ngrok",
     "stable-diffusion_local",
     "naifu_k_euler_ancestral_local"
   ],
   "defaultPrompts.prompt": "masterpiece, best quality",
   "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+  "detalesPrompts":["small breasts","loli"],
   "randomTag": true,
   "magic": true,
   "NSFW": false,

@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const join = require("path").join;
 const 元素法典 = require("./data/元素法典.json");
-const { server, runEnv, defaultPrompts } = require("./config");
+const { server, runEnv, defaultPrompts,config } = require("./config");
 const { promptsRandom: promptsRdom } = require("./data/prompts");
 const { tunnels } = require("./utils/ngrok");
 
@@ -39,6 +39,7 @@ function removeDuplicates(tags) {
     .split(",")
     .map((v) => v.trim())
     .filter((f) => f)
+    .filter((f) => config.detalesPrompts.find((a) => f.includes(a)) == undefined)
     .forEach((v) => rd.add(v));
   return Array.from(rd).join(",");
 }
