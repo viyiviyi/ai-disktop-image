@@ -39,9 +39,9 @@
         "token": "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
       },
       "apiType": "stable-diffusion",
-      "defaultPrompts": ["", ""],
+      "defaultPrompts": ["xxx1", ""],
       "option": {
-        "sampler": "Euler a"
+        "sampler": "DPM++ 2S a"
       }
     },
     {
@@ -49,21 +49,18 @@
       "name": "stable-diffusion_local",
       "isMagic": true,
       "apiType": "stable-diffusion",
-      "defaultPrompts": ["", ""],
+      "defaultPrompts": ["xxx1,solo", ""],
       "option": {
-        "sampler": "Euler a"
+        "sampler": "DPM++ 2S a"
       }
     }
   ],
   "server-type": [
-    "naifu_k_euler_ancestral_ngrok",
-    "stable-diffusion_ngrok",
-    "stable-diffusion_local",
-    "naifu_k_euler_ancestral_local"
+    "stable-diffusion_local"
   ],
   "defaultPrompts.prompt": "masterpiece, best quality",
   "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-  "detalesPrompts":["small breasts","loli"],
+  "detalesPrompts":["small breasts","loli","flat"],
   "randomTag": true,
   "magic": true,
   "NSFW": false,

@@ -212,7 +212,7 @@ const argTemplate = {
       batch_size: 1,
       n_iter: 1,
       steps: 28,
-      cfg_scale: 12,
+      cfg_scale: 7,
       width: option.width,
       height: option.height,
       restore_faces: false,
