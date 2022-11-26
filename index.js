@@ -1,6 +1,6 @@
 const { defaultPrompts } = require("./app/config");
-const { getImage, setTags } = require("./app/image");
-const { setBg, srImage } = require("./app/utils/utils");
+const { getImage } = require("./app/image");
+const { setBg, srImage, setTags } = require("./app/utils/utils");
 const join = require("path").join;
 
 async function main() {
@@ -14,4 +14,8 @@ async function main() {
   if (!(await srImage(path, bgimgName))) return;
   await setBg(bgimgName);
 }
-main();
+try {
+  main();
+} catch (error) {
+  console.error(error);
+}

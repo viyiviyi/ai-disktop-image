@@ -9,10 +9,7 @@
         "enadle": true,
         "token": "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
       },
-      "defaultPrompts": [
-        "",
-        ""
-      ],
+      "defaultPrompts": ["", ""],
       "option": {
         "sampler": "k_euler_ancestral"
       }
@@ -22,10 +19,7 @@
       "name": "naifu_k_euler_ancestral_local",
       "isMagic": true,
       "apiType": "naifu",
-      "defaultPrompts": [
-        "",
-        ""
-      ],
+      "defaultPrompts": ["", ""],
       "option": {
         "sampler": "k_euler_ancestral"
       }
@@ -39,28 +33,30 @@
         "token": "2GZ2Qu3eF16h1plsPeS6jpYRpPg_7ejEiaLRy8uKdcfgKiQZL"
       },
       "apiType": "stable-diffusion",
-      "defaultPrompts": ["xxx1", ""],
+      "defaultPrompts": ["", ""],
       "option": {
-        "sampler": "DPM++ 2S a"
+        "sampler": "DPM++ 2S a",
+        "scale": 7,
+        "steps": 12
       }
     },
     {
       "url": "http://127.0.0.1:7860/sdapi/v1/txt2img",
       "name": "stable-diffusion_local",
-      "isMagic": true,
+      "isMagic": false,
       "apiType": "stable-diffusion",
-      "defaultPrompts": ["xxx1,solo", ""],
+      "defaultPrompts": ["flower, 1girl,petals,gloves,solo,hyper detailed,Cinematic light, intricate_detail, highres, official art,finely detailed beautiful eyes, high resolution illustration, 8k,vividcolor,colorful", ""],
       "option": {
-        "sampler": "DPM++ 2S a"
+        "sampler": "DPM++ 2M Karras",
+        "scale": 7,
+        "steps": 12
       }
     }
   ],
-  "server-type": [
-    "stable-diffusion_local"
-  ],
+  "server-type": ["stable-diffusion_local"],
   "defaultPrompts.prompt": "masterpiece, best quality",
-  "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-  "detalesPrompts":["small breasts","loli","flat"],
+  "defaultPrompts.unprompt": "text, lowres, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad anatomy, bad hands, error, missing fingers, extra digit, fewer digits, missing arms, long neck, Humpbacked",
+  "detalesPrompts": ["small breast", "loli", "flat"],
   "randomTag": true,
   "magic": true,
   "NSFW": false,

@@ -1,14 +1,15 @@
 const { join } = require("path");
 const { exec } = require("shelljs");
-const { config } = require("../config");
+const fs = require("fs");
+const { config, defaultPrompts } = require("../config");
 
 /**
  * 设置图片为桌面背景
  * @param {string} path 图片完整路径
  */
-module.exports.setBg = async function setBg(path) {
+async function setBg(path) {
   exec("python " + join(__dirname, "setBg.py") + " " + path);
-};
+}
 
 /**
  * 图片超分辨率
@@ -16,7 +17,7 @@ module.exports.setBg = async function setBg(path) {
  * @param {string} outPath 输出图片文件路径
  * @returns {boolean} 是否成功
  */
-module.exports.srImage = async function srImage(path, outPath) {
+async function srImage(path, outPath) {
   if (!config["Super-Resolution"]) return true;
   let p = exec(
     config["Super-Resolution"]
@@ -24,4 +25,50 @@ module.exports.srImage = async function srImage(path, outPath) {
       .replace("$output", outPath)
   );
   return !p.code;
+}
+
+function removeDuplicates(tags) {
+  let rd = new Set();
+  tags
+    .split(",")
+    .map((v) => v.trim())
+    .filter((f) => f)
+    .filter(
+      (f) => config.detalesPrompts.find((a) => f.includes(a)) == undefined
+    )
+    .forEach((v) => rd.add(v));
+  return Array.from(rd).join(",");
+}
+
+function promptsJoin(...arg) {
+  return removeDuplicates(arg.join(","));
+}
+
+async function saveImage(base64, path = "images", dataType = "base64") {
+  try {
+    var dir = join(require.main.path, path);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+    var fileName = Date.now() + ".png";
+    let filePath = join(dir, fileName);
+    fs.writeFileSync(filePath, base64, dataType);
+    return filePath;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+function setTags(prompts, unprompt) {
+  defaultPrompts.prompt = prompts || defaultPrompts.prompt;
+  defaultPrompts.unprompt = unprompt || defaultPrompts.unprompt;
+}
+
+module.exports = {
+  setTags,
+  promptsJoin,
+  removeDuplicates,
+  srImage,
+  setBg,
+  saveImage,
 };

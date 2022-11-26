@@ -1,6 +1,6 @@
-const { runEnv, defaultPrompts } = require("./app/config");
-const { getImage, setTags } = require("./app/image");
-const { srImage } = require("./app/utils/utils");
+const { runEnv, defaultPrompts } = require("../app/config");
+const { getImage, setTags } = require("../app/image");
+const { srImage } = require("../app/utils/utils");
 
 runEnv.NSFW = false;
 setTags(
