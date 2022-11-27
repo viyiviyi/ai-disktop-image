@@ -37,7 +37,7 @@
       "option": {
         "sampler": "DPM++ 2S a",
         "scale": 7,
-        "steps": 12
+        "steps": 28
       }
     },
     {
@@ -45,11 +45,14 @@
       "name": "stable-diffusion_local",
       "isMagic": false,
       "apiType": "stable-diffusion",
-      "defaultPrompts": ["flower, 1girl,petals,gloves,solo,hyper detailed,Cinematic light, intricate_detail, highres, official art,finely detailed beautiful eyes, high resolution illustration, 8k,vividcolor,colorful", ""],
+      "defaultPrompts": [
+        "1girl,flower,petals,gloves,solo,full body,hyper detailed,Cinematic light, intricate_detail, highres, official art,finely detailed beautiful eyes, high resolution illustration, 8k,vividcolor,colorful",
+        ""
+      ],
       "option": {
         "sampler": "DPM++ 2M Karras",
         "scale": 7,
-        "steps": 12
+        "steps": 28
       }
     }
   ],
