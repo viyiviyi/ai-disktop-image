@@ -28,11 +28,18 @@ function addTags(tag, name, type = 0, hotCount = 0) {
   }
   name = name.replace(/_/g, "");
   if (!tags.has(tag)) {
+    let tagVal = ls.find((l) => l[3].includes(name));
+    if (tagVal) {
+      tagVal[3].unshift(tag);
+      return;
+    }
     tags.add(tag);
-    ls.push([tag, type, hotCount, [...name.split(",")]]);
-    translations.push([tag, [...name.split(",")]]);
+    ls.push([tag, type, hotCount, [name]]);
+    translations.push([tag, [name]]);
   } else {
-    let idx = ls.findIndex((f) => f[0] == tag || f[3].includes(tag));
+    let idx = ls.findIndex(
+      (f) => f[0] == tag || f[3].includes(tag) || f[3].includes(name)
+    );
     if (idx > -1) {
       name.split(",").forEach((v) => {
         if (ls[idx][3].findIndex((f) => f.includes(v)) == -1) {
@@ -59,14 +66,15 @@ async function main() {
       type: Number(v[1]),
       hotCount: Number(v[2]),
     };
-    v[3].forEach((alias) => {
+    v[3].forEach((alias, idx) => {
       danboorusHash[alias] = {
-        type: v[1],
-        hotCount: v[2],
+        type: Number(v[1]),
+        hotCount: Number(v[2]) - idx - 1,
       };
     });
   });
 
+  // tags.translation.csv
   let def = fs.readFileSync("tags.translation.csv").toString().split("\n");
   def
     .filter((v) => v)
@@ -78,9 +86,13 @@ async function main() {
         .split(",")
         .map((v) => v.trim());
       let tag = l[0].replace(/\s+/g, "_");
-      let name = l.slice(1).join(",");
-      addTags(tag, name);
+      let names = l.slice(1);
+      names.forEach((name) => {
+        addTags(tag, name);
+      });
     });
+  
+  // https://chart.dawnmark.cn/tag/nai-categories
   let val = await axios
     .get(baseUrl + "/tag/nai-categories")
     .then((d) => d.data)
@@ -104,7 +116,7 @@ async function main() {
                   .toLowerCase()
                   .trim()
                   .replace(/\s+/g, "_");
-                let name = v.name.trim().replace(/\s+/g, "_");
+                let name = v.name.trim().replace(/\s+/g, "");
                 addTags(tag, name);
               });
             }
@@ -113,36 +125,38 @@ async function main() {
       }
     }
   }
+
+  // yamltags
   let ys = getFiles("yamltags");
   ys.forEach((vPath) => {
     let list = getYamltags(vPath);
     list.forEach((v) => {
       let tag = v[0].toLowerCase().trim().replace(/\s+/g, "_");
-      let name =
-        v[2].trim().replace(/\s+/g, "_") +
-        ">" +
-        v[3].trim().replace(/\s+/g, "_");
+      let name = v[3].trim().replace(/\s+/g, "");
       addTags(tag, name);
     });
   });
 
+  // danboorus
   danboorus.forEach((v) => {
     // add alias
-    let idx = ls.find((f) => f[0] == v[0]);
+    let idx = ls.find((f) => f[0] == v[0]||v[3].includes(f[0]));
     if (idx > -1) {
-      ls[idx][3].shift(
-        ...v[3].filter((f) => ls.findIndex((lf) => lf[0] == f) == -1)
+      ls[idx][3].unshift(
+        ...v[3].filter((f) => !tags.has(f))
       );
     }
   });
 
+  // sort
   ls = ls.sort((v, n) => n[2] - v[2]);
 
+  // save
   fs.writeFileSync(
     "tags.csv",
     ls
       .map((v) => {
-        v[3] = '"' + v[3].filter((v) => v).join(",") + '"';
+        v[3] = '"' + Array.from(new Set(v[3].filter((v) => v))).join(",") + '"';
         return v.join(",");
       })
       .join("\n")
@@ -151,7 +165,7 @@ async function main() {
     "translation.csv",
     translations
       .map((v) => {
-        v[1] = '"' + v[1].filter((v) => v).join(",") + '"';
+        v[1] = '"' + Array.from(new Set(v[1].filter((v) => v))).join(",") + '"';
         return v.join(",");
       })
       .join("\n")

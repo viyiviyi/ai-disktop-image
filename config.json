@@ -46,7 +46,7 @@
       "isMagic": false,
       "apiType": "stable-diffusion",
       "defaultPrompts": [
-        "1girl,flower,petals,gloves,solo,full body,hyper detailed,Cinematic light, intricate_detail, highres, official art,finely detailed beautiful eyes, high resolution illustration, 8k,vividcolor,colorful",
+        "1girl,flower,petals,gloves,solo,vividcolor,colorful",
         ""
       ],
       "option": {
@@ -58,7 +58,7 @@
   ],
   "server-type": ["stable-diffusion_local"],
   "defaultPrompts.prompt": "masterpiece, best quality",
-  "defaultPrompts.unprompt": "text, lowres, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad anatomy, bad hands, error, missing fingers, extra digit, fewer digits, missing arms, long neck, Humpbacked",
+  "defaultPrompts.unprompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,artist name",
   "detalesPrompts": ["small breast", "loli", "flat"],
   "randomTag": true,
   "magic": true,

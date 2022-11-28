@@ -17,16 +17,16 @@ async function getArg(ser = server[0]) {
   let rdomTags = runEnv.randomTag ? promptsRdom() : "";
   const option = Object.assign({}, ser.option || {}, {
     prompts: promptsJoin(
-      defaultPrompts.prompt,
       ser.option.prompt,
       ser.defaultPrompts[0],
       rdomTags,
+      defaultPrompts.prompt,
       promptMagic
     ),
     unprompts: promptsJoin(
-      defaultPrompts.unprompt,
       ser.option.unprompt,
       ser.defaultPrompts[1],
+      defaultPrompts.unprompt,
       unpromptMagic
     ),
   });
