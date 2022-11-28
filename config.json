@@ -43,7 +43,7 @@
     {
       "url": "http://127.0.0.1:7860/sdapi/v1/txt2img",
       "name": "stable-diffusion_local",
-      "isMagic": false,
+      "isMagic": true,
       "apiType": "stable-diffusion",
       "defaultPrompts": [
         "1girl,flower,petals,gloves,solo,vividcolor,colorful",
