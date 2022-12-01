@@ -35,13 +35,13 @@
       "apiType": "stable-diffusion",
       "defaultPrompts": ["", ""],
       "option": {
-        "sampler": "DPM++ 2S a",
+        "sampler": "DPM++ 2M Karras",
         "scale": 7,
-        "steps": 28
+        "steps": 16
       }
     },
     {
-      "url": "http://127.0.0.1:7860/sdapi/v1/txt2img",
+      "url": "http://127.0.0.1:8210/sdapi/v1/txt2img",
       "name": "stable-diffusion_local",
       "isMagic": true,
       "apiType": "stable-diffusion",
@@ -50,9 +50,9 @@
         ""
       ],
       "option": {
-        "sampler": "DPM++ 2M Karras",
+        "sampler": "DPM++ SDE Karras",
         "scale": 7,
-        "steps": 28
+        "steps": 16
       }
     }
   ],

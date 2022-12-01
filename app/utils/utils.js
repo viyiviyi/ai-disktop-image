@@ -1,16 +1,43 @@
 const { join } = require("path");
 const { exec } = require("shelljs");
 const fs = require("fs");
+const os = require("os");
 const { config, defaultPrompts } = require("../config");
+
 
 /**
  * 设置图片为桌面背景
  * @param {string} path 图片完整路径
  */
 async function setBg(path) {
-  exec("python " + join(__dirname, "setBg.py") + " " + path);
+  switch (os.platform()) {
+    case "android":
+      break;
+    case "win32":
+      setBgWin(path);
+      break;
+    case "aix":
+      break;
+    case "linux":
+      break;
+    case "cygwin":
+      break;
+    case "darwin":
+      break;
+    case "freebsd":
+      break;
+    case "haiku":
+      break;
+    case "openbsd":
+      break;
+    case "sunos":
+      break;
+  }
 }
-
+function setBgWin(path) {
+  const { exec } = require("child_process");
+  exec(join(__dirname,'./exes'+'/wallpaper.exe') + " " + path);
+}
 /**
  * 图片超分辨率
  * @param {string} path  图片文件路径

@@ -14,6 +14,7 @@ async function main() {
   if (!(await srImage(path, bgimgName))) return;
   await setBg(bgimgName);
 }
+
 try {
   main();
 } catch (error) {

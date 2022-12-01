@@ -7,8 +7,8 @@ const { server } = require("./app/config");
 
 // console.log(promptsRdom())
 // console.log(getArg(server[3]))
-// // setBg("E:\\projects\\nodejs\\windowBgImageAI\\images\\1665983526066.png");
-getImage();
+setBg("E:\\projects\\nodejs\\windowBgImageAI\\default.png");
+// getImage();
 
 // console.log(require.main.path)
 // updatePrompts()
